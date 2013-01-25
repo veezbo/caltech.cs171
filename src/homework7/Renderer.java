@@ -44,7 +44,7 @@ public class Renderer implements GLEventListener {
         displayCylinders(drawable);
         
         //TODO: Precompute interpolations of the cubic spline with catmull-rom
-        
+        //TOOD: This is a test.
         
 	}
 
