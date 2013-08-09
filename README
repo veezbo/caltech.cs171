@@ -1,4 +1,9 @@
-Yes, I know I should have made a Makefile. This was in the past though.
+Assignments for the Fall 2013 CS171 class at Caltech with Professor Al Barr.
+If you are taking the class currently, honor code.
+
+
+
+The below instructions are for compiling on Linux, and all the provided JOGL libraries are for linux as well.
 
 Compiling the whole Project:
 
@@ -8,3 +13,6 @@ javac -classpath /home/veezbo/Documents/Programming/caltech.cs171/bin:/home/veez
 Running an Individual Homework
 
 java -classpath /home/veezbo/Documents/Programming/caltech.cs171/bin:/home/veezbo/Documents/Programming/caltech.cs171/lib/antlr-3.4-complete.jar:/home/veezbo/Documents/Programming/caltech.cs171/lib/commons-math3-3.0-bin/commons-math3-3.0/commons-math3-3.0.jar:/home/veezbo/Documents/Programming/caltech.cs171/lib/commons-math3-3.0-bin/commons-math3-3.0/commons-math3-3.0-javadoc.jar:/home/veezbo/Documents/Programming/caltech.cs171/lib/commons-math3-3.0-bin/commons-math3-3.0/commons-math3-3.0-sources.jar:/home/veezbo/Documents/Programming/caltech.cs171/lib/JOGL\ Files/gluegen-2.0-b594-20120929-linux-amd64/jar/gluegen-rt-natives-linux-amd64.jar:/home/veezbo/Documents/Programming/caltech.cs171/lib/JOGL\ Files/gluegen-2.0-b594-20120929-linux-amd64/jar/gluegen-rt.jar:/home/veezbo/Documents/Programming/caltech.cs171/lib/JOGL\ Files/gluegen-2.0-b594-20120929-linux-amd64/jar/gluegen.jar:/home/veezbo/Documents/Programming/caltech.cs171/lib/JOGL\ Files/jogl-2.0-b819-20120929-linux-amd64/jar/jogl-all-mobile.jar:/home/veezbo/Documents/Programming/caltech.cs171/lib/JOGL\ Files/jogl-2.0-b819-20120929-linux-amd64/jar/jogl-all-natives-linux-amd64.jar:/home/veezbo/Documents/Programming/caltech.cs171/lib/JOGL\ Files/jogl-2.0-b819-20120929-linux-amd64/jar/jogl-all-noawt.jar:/home/veezbo/Documents/Programming/caltech.cs171/lib/JOGL\ Files/jogl-2.0-b819-20120929-linux-amd64/jar/jogl-all.jar:/home/veezbo/Documents/Programming/caltech.cs171/lib/JOGL\ Files/jogl-2.0-b819-20120929-linux-amd64/jar/jogl-test.jar homework7.HW7 < sample.script
+
+
+Yes, I know I should have made a Makefile. 
