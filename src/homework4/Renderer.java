@@ -19,7 +19,9 @@ import javax.media.opengl.GLAutoDrawable;
 import javax.media.opengl.GLEventListener;
 import javax.media.opengl.awt.GLCanvas;
 
-
+/*
+ * Class that takes all data and implements the drawing and pertinent shading
+ */
 public class Renderer implements GLEventListener 
 {
     private OpenInventorData oid;
@@ -50,7 +52,7 @@ public class Renderer implements GLEventListener
             gl.glEnable(GL2.GL_CULL_FACE);
             gl.glEnable(GL2.GL_DEPTH_TEST);
             
-        //Projection Mode, to create the Frustrum
+        //Projection Mode, to create our camera viewing conditions
             PerspectiveCameraData pcd = oid.pcd;
             gl.glMatrixMode(GL2.GL_PROJECTION);
             gl.glLoadIdentity();
@@ -59,10 +61,12 @@ public class Renderer implements GLEventListener
         //ModelView Mode, which is where we'll stay for the rest of the program
             gl.glMatrixMode(GL2.GL_MODELVIEW);
             gl.glLoadIdentity();
-        
+       
+            
         //Camera Orientation (location via translation and orientation via rotation)
             Triple camPosition = pcd.position;
             gl.glTranslatef(-1.0f * (float) camPosition.data[0], -1.0f * (float) camPosition.data[1], -1.0f * (float) camPosition.data[2]);
+            //gl.glTranslatef((float) camPosition.data[0], (float) camPosition.data[1], (float) camPosition.data[2]);
             
             Quadruple orientation = pcd.orientation;
             float deg = (float) ( orientation.data[3]/(Math.PI) * 180.0f ); 
@@ -225,9 +229,7 @@ public class Renderer implements GLEventListener
     
 //Uninteresting and Unused Methods
     
-    public void displayChanged(GLAutoDrawable gLDrawable, boolean modeChanged, boolean deviceChanged) {
-    	System.out.println("displayChanged called");
-    }
+    public void displayChanged(GLAutoDrawable gLDrawable, boolean modeChanged, boolean deviceChanged) {}
     
     public void reshape(GLAutoDrawable gLDrawable, int x, int y, int width, int height) {
         final GL2 gl = gLDrawable.getGL().getGL2();
@@ -281,7 +283,5 @@ public class Renderer implements GLEventListener
 //		
 //	}
 	
-	public void dispose(GLAutoDrawable arg0) {
-		System.out.println("dispose() called");
-	}
+	public void dispose(GLAutoDrawable arg0) {}
 }

@@ -1,4 +1,4 @@
-// $ANTLR 3.4 C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g 2012-11-22 05:07:12
+// $ANTLR 3.4 C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g 2013-03-29 00:11:15
 
 package homework2;
 	
@@ -15,7 +15,7 @@ import java.util.ArrayList;
 @SuppressWarnings({"all", "warnings", "unchecked"})
 public class OpenInventorParser extends Parser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "COMMENT", "HASH", "INT", "REAL", "WHITESPACE", "','", "'Coordinate3 {'", "'IndexedFaceSet {'", "'PerspectiveCamera {'", "'Separator {'", "'Transform {'", "']'", "'bottom'", "'coordIndex ['", "'farDistance'", "'left'", "'nearDistance'", "'orientation'", "'point ['", "'position'", "'right'", "'rotation'", "'scaleFactor'", "'top'", "'translation'", "'}'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "COMMENT", "HASH", "INT", "REAL", "WHITESPACE", "','", "'Coordinate3'", "'IndexedFaceSet'", "'PerspectiveCamera'", "'Separator'", "'Transform'", "'['", "']'", "'bottom'", "'coordIndex'", "'farDistance'", "'left'", "'nearDistance'", "'orientation'", "'point'", "'position'", "'right'", "'rotation'", "'scaleFactor'", "'top'", "'translation'", "'{'", "'}'"
     };
 
     public static final int EOF=-1;
@@ -40,6 +40,8 @@ public class OpenInventorParser extends Parser {
     public static final int T__27=27;
     public static final int T__28=28;
     public static final int T__29=29;
+    public static final int T__30=30;
+    public static final int T__31=31;
     public static final int COMMENT=4;
     public static final int HASH=5;
     public static final int INT=6;
@@ -164,7 +166,7 @@ public class OpenInventorParser extends Parser {
 
 
     // $ANTLR start "perspectiveCamera"
-    // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:41:1: perspectiveCamera returns [PerspectiveCameraData pcd] : 'PerspectiveCamera {' pos= position orient= orientation n= nearDistance f= farDistance l= left r= right t= top b= bottom '}' ;
+    // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:41:1: perspectiveCamera returns [PerspectiveCameraData pcd] : 'PerspectiveCamera' '{' pos= position orient= orientation n= nearDistance f= farDistance l= left r= right t= top b= bottom '}' ;
     public final PerspectiveCameraData perspectiveCamera() throws RecognitionException {
         PerspectiveCameraData pcd = null;
 
@@ -187,60 +189,62 @@ public class OpenInventorParser extends Parser {
 
 
         try {
-            // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:42:2: ( 'PerspectiveCamera {' pos= position orient= orientation n= nearDistance f= farDistance l= left r= right t= top b= bottom '}' )
-            // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:42:4: 'PerspectiveCamera {' pos= position orient= orientation n= nearDistance f= farDistance l= left r= right t= top b= bottom '}'
+            // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:42:2: ( 'PerspectiveCamera' '{' pos= position orient= orientation n= nearDistance f= farDistance l= left r= right t= top b= bottom '}' )
+            // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:42:4: 'PerspectiveCamera' '{' pos= position orient= orientation n= nearDistance f= farDistance l= left r= right t= top b= bottom '}'
             {
             match(input,12,FOLLOW_12_in_perspectiveCamera78); 
 
-            pushFollow(FOLLOW_position_in_perspectiveCamera84);
+            match(input,30,FOLLOW_30_in_perspectiveCamera80); 
+
+            pushFollow(FOLLOW_position_in_perspectiveCamera86);
             pos=position();
 
             state._fsp--;
 
 
-            pushFollow(FOLLOW_orientation_in_perspectiveCamera90);
+            pushFollow(FOLLOW_orientation_in_perspectiveCamera92);
             orient=orientation();
 
             state._fsp--;
 
 
-            pushFollow(FOLLOW_nearDistance_in_perspectiveCamera96);
+            pushFollow(FOLLOW_nearDistance_in_perspectiveCamera98);
             n=nearDistance();
 
             state._fsp--;
 
 
-            pushFollow(FOLLOW_farDistance_in_perspectiveCamera102);
+            pushFollow(FOLLOW_farDistance_in_perspectiveCamera104);
             f=farDistance();
 
             state._fsp--;
 
 
-            pushFollow(FOLLOW_left_in_perspectiveCamera108);
+            pushFollow(FOLLOW_left_in_perspectiveCamera110);
             l=left();
 
             state._fsp--;
 
 
-            pushFollow(FOLLOW_right_in_perspectiveCamera114);
+            pushFollow(FOLLOW_right_in_perspectiveCamera116);
             r=right();
 
             state._fsp--;
 
 
-            pushFollow(FOLLOW_top_in_perspectiveCamera120);
+            pushFollow(FOLLOW_top_in_perspectiveCamera122);
             t=top();
 
             state._fsp--;
 
 
-            pushFollow(FOLLOW_bottom_in_perspectiveCamera126);
+            pushFollow(FOLLOW_bottom_in_perspectiveCamera128);
             b=bottom();
 
             state._fsp--;
 
 
-            match(input,29,FOLLOW_29_in_perspectiveCamera128); 
+            match(input,31,FOLLOW_31_in_perspectiveCamera130); 
 
 
             	pcd = new PerspectiveCameraData(pos, orient, n, f, l, r, t, b);
@@ -276,9 +280,9 @@ public class OpenInventorParser extends Parser {
             // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:46:30: ( 'position' trip= triple )
             // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:46:32: 'position' trip= triple
             {
-            match(input,23,FOLLOW_23_in_position142); 
+            match(input,24,FOLLOW_24_in_position144); 
 
-            pushFollow(FOLLOW_triple_in_position146);
+            pushFollow(FOLLOW_triple_in_position148);
             trip=triple();
 
             state._fsp--;
@@ -316,9 +320,9 @@ public class OpenInventorParser extends Parser {
             // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:47:36: ( 'orientation' quad= quadruple )
             // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:47:38: 'orientation' quad= quadruple
             {
-            match(input,21,FOLLOW_21_in_orientation161); 
+            match(input,22,FOLLOW_22_in_orientation163); 
 
-            pushFollow(FOLLOW_quadruple_in_orientation165);
+            pushFollow(FOLLOW_quadruple_in_orientation167);
             quad=quadruple();
 
             state._fsp--;
@@ -356,9 +360,9 @@ public class OpenInventorParser extends Parser {
             // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:48:34: ( 'nearDistance' r= real )
             // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:48:36: 'nearDistance' r= real
             {
-            match(input,20,FOLLOW_20_in_nearDistance179); 
+            match(input,21,FOLLOW_21_in_nearDistance181); 
 
-            pushFollow(FOLLOW_real_in_nearDistance183);
+            pushFollow(FOLLOW_real_in_nearDistance185);
             r=real();
 
             state._fsp--;
@@ -396,9 +400,9 @@ public class OpenInventorParser extends Parser {
             // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:49:33: ( 'farDistance' r= real )
             // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:49:35: 'farDistance' r= real
             {
-            match(input,18,FOLLOW_18_in_farDistance197); 
+            match(input,19,FOLLOW_19_in_farDistance199); 
 
-            pushFollow(FOLLOW_real_in_farDistance201);
+            pushFollow(FOLLOW_real_in_farDistance203);
             r=real();
 
             state._fsp--;
@@ -436,9 +440,9 @@ public class OpenInventorParser extends Parser {
             // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:50:27: ( 'left' r= real )
             // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:50:29: 'left' r= real
             {
-            match(input,19,FOLLOW_19_in_left216); 
+            match(input,20,FOLLOW_20_in_left218); 
 
-            pushFollow(FOLLOW_real_in_left220);
+            pushFollow(FOLLOW_real_in_left222);
             r=real();
 
             state._fsp--;
@@ -476,9 +480,9 @@ public class OpenInventorParser extends Parser {
             // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:51:27: ( 'right' r= real )
             // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:51:29: 'right' r= real
             {
-            match(input,24,FOLLOW_24_in_right234); 
+            match(input,25,FOLLOW_25_in_right236); 
 
-            pushFollow(FOLLOW_real_in_right238);
+            pushFollow(FOLLOW_real_in_right240);
             r=real();
 
             state._fsp--;
@@ -516,9 +520,9 @@ public class OpenInventorParser extends Parser {
             // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:52:26: ( 'top' r= real )
             // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:52:28: 'top' r= real
             {
-            match(input,27,FOLLOW_27_in_top253); 
+            match(input,28,FOLLOW_28_in_top255); 
 
-            pushFollow(FOLLOW_real_in_top257);
+            pushFollow(FOLLOW_real_in_top259);
             r=real();
 
             state._fsp--;
@@ -556,9 +560,9 @@ public class OpenInventorParser extends Parser {
             // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:53:28: ( 'bottom' r= real )
             // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:53:30: 'bottom' r= real
             {
-            match(input,16,FOLLOW_16_in_bottom271); 
+            match(input,17,FOLLOW_17_in_bottom273); 
 
-            pushFollow(FOLLOW_real_in_bottom275);
+            pushFollow(FOLLOW_real_in_bottom277);
             r=real();
 
             state._fsp--;
@@ -590,7 +594,7 @@ public class OpenInventorParser extends Parser {
 
 
     // $ANTLR start "separator"
-    // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:61:1: separator returns [SeparatorData sd] : 'Separator {' (t= transform )+ c= coordinate3 i= indexedFaceSet '}' ;
+    // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:61:1: separator returns [SeparatorData sd] : 'Separator' '{' (t= transform )+ c= coordinate3 i= indexedFaceSet '}' ;
     public final SeparatorData separator() throws RecognitionException {
         separator_stack.push(new separator_scope());
         SeparatorData sd = null;
@@ -605,12 +609,14 @@ public class OpenInventorParser extends Parser {
 
         	((separator_scope)separator_stack.peek()).tds = new ArrayList<TransformData>(); 
         try {
-            // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:64:3: ( 'Separator {' (t= transform )+ c= coordinate3 i= indexedFaceSet '}' )
-            // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:64:3: 'Separator {' (t= transform )+ c= coordinate3 i= indexedFaceSet '}'
+            // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:64:3: ( 'Separator' '{' (t= transform )+ c= coordinate3 i= indexedFaceSet '}' )
+            // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:64:3: 'Separator' '{' (t= transform )+ c= coordinate3 i= indexedFaceSet '}'
             {
-            match(input,13,FOLLOW_13_in_separator305); 
+            match(input,13,FOLLOW_13_in_separator307); 
 
-            // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:64:17: (t= transform )+
+            match(input,30,FOLLOW_30_in_separator309); 
+
+            // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:64:19: (t= transform )+
             int cnt2=0;
             loop2:
             do {
@@ -624,9 +630,9 @@ public class OpenInventorParser extends Parser {
 
                 switch (alt2) {
             	case 1 :
-            	    // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:64:18: t= transform
+            	    // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:64:20: t= transform
             	    {
-            	    pushFollow(FOLLOW_transform_in_separator310);
+            	    pushFollow(FOLLOW_transform_in_separator314);
             	    t=transform();
 
             	    state._fsp--;
@@ -647,19 +653,19 @@ public class OpenInventorParser extends Parser {
             } while (true);
 
 
-            pushFollow(FOLLOW_coordinate3_in_separator320);
+            pushFollow(FOLLOW_coordinate3_in_separator324);
             c=coordinate3();
 
             state._fsp--;
 
 
-            pushFollow(FOLLOW_indexedFaceSet_in_separator326);
+            pushFollow(FOLLOW_indexedFaceSet_in_separator330);
             i=indexedFaceSet();
 
             state._fsp--;
 
 
-            match(input,29,FOLLOW_29_in_separator328); 
+            match(input,31,FOLLOW_31_in_separator332); 
 
 
             	sd = new SeparatorData(((separator_scope)separator_stack.peek()).tds, c, i);
@@ -684,7 +690,7 @@ public class OpenInventorParser extends Parser {
 
 
     // $ANTLR start "transform"
-    // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:74:1: transform returns [TransformData td] : 'Transform {' (t= translation |r= rotation |s= scaleFactor )+ '}' ;
+    // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:74:1: transform returns [TransformData td] : 'Transform' '{' (t= translation |r= rotation |s= scaleFactor )+ '}' ;
     public final TransformData transform() throws RecognitionException {
         TransformData td = null;
 
@@ -697,28 +703,30 @@ public class OpenInventorParser extends Parser {
 
 
         try {
-            // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:74:38: ( 'Transform {' (t= translation |r= rotation |s= scaleFactor )+ '}' )
-            // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:74:41: 'Transform {' (t= translation |r= rotation |s= scaleFactor )+ '}'
+            // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:74:38: ( 'Transform' '{' (t= translation |r= rotation |s= scaleFactor )+ '}' )
+            // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:74:41: 'Transform' '{' (t= translation |r= rotation |s= scaleFactor )+ '}'
             {
-            match(input,14,FOLLOW_14_in_transform350); 
+            match(input,14,FOLLOW_14_in_transform354); 
 
-            // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:74:55: (t= translation |r= rotation |s= scaleFactor )+
+            match(input,30,FOLLOW_30_in_transform356); 
+
+            // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:74:57: (t= translation |r= rotation |s= scaleFactor )+
             int cnt3=0;
             loop3:
             do {
                 int alt3=4;
                 switch ( input.LA(1) ) {
-                case 28:
+                case 29:
                     {
                     alt3=1;
                     }
                     break;
-                case 25:
+                case 26:
                     {
                     alt3=2;
                     }
                     break;
-                case 26:
+                case 27:
                     {
                     alt3=3;
                     }
@@ -728,9 +736,9 @@ public class OpenInventorParser extends Parser {
 
                 switch (alt3) {
             	case 1 :
-            	    // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:74:56: t= translation
+            	    // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:74:58: t= translation
             	    {
-            	    pushFollow(FOLLOW_translation_in_transform355);
+            	    pushFollow(FOLLOW_translation_in_transform361);
             	    t=translation();
 
             	    state._fsp--;
@@ -739,9 +747,9 @@ public class OpenInventorParser extends Parser {
             	    }
             	    break;
             	case 2 :
-            	    // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:74:73: r= rotation
+            	    // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:74:75: r= rotation
             	    {
-            	    pushFollow(FOLLOW_rotation_in_transform362);
+            	    pushFollow(FOLLOW_rotation_in_transform368);
             	    r=rotation();
 
             	    state._fsp--;
@@ -750,9 +758,9 @@ public class OpenInventorParser extends Parser {
             	    }
             	    break;
             	case 3 :
-            	    // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:74:87: s= scaleFactor
+            	    // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:74:89: s= scaleFactor
             	    {
-            	    pushFollow(FOLLOW_scaleFactor_in_transform369);
+            	    pushFollow(FOLLOW_scaleFactor_in_transform375);
             	    s=scaleFactor();
 
             	    state._fsp--;
@@ -771,7 +779,7 @@ public class OpenInventorParser extends Parser {
             } while (true);
 
 
-            match(input,29,FOLLOW_29_in_transform373); 
+            match(input,31,FOLLOW_31_in_transform379); 
 
 
             	td = new TransformData(t, r, s);
@@ -807,9 +815,9 @@ public class OpenInventorParser extends Parser {
             // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:79:33: ( 'translation' trip= triple )
             // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:79:35: 'translation' trip= triple
             {
-            match(input,28,FOLLOW_28_in_translation388); 
+            match(input,29,FOLLOW_29_in_translation394); 
 
-            pushFollow(FOLLOW_triple_in_translation392);
+            pushFollow(FOLLOW_triple_in_translation398);
             trip=triple();
 
             state._fsp--;
@@ -847,9 +855,9 @@ public class OpenInventorParser extends Parser {
             // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:80:33: ( 'rotation' quad= quadruple )
             // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:80:36: 'rotation' quad= quadruple
             {
-            match(input,25,FOLLOW_25_in_rotation407); 
+            match(input,26,FOLLOW_26_in_rotation413); 
 
-            pushFollow(FOLLOW_quadruple_in_rotation411);
+            pushFollow(FOLLOW_quadruple_in_rotation417);
             quad=quadruple();
 
             state._fsp--;
@@ -887,9 +895,9 @@ public class OpenInventorParser extends Parser {
             // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:81:33: ( 'scaleFactor' trip= triple )
             // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:81:36: 'scaleFactor' trip= triple
             {
-            match(input,26,FOLLOW_26_in_scaleFactor426); 
+            match(input,27,FOLLOW_27_in_scaleFactor432); 
 
-            pushFollow(FOLLOW_triple_in_scaleFactor430);
+            pushFollow(FOLLOW_triple_in_scaleFactor436);
             trip=triple();
 
             state._fsp--;
@@ -915,7 +923,7 @@ public class OpenInventorParser extends Parser {
 
 
     // $ANTLR start "coordinate3"
-    // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:86:1: coordinate3 returns [Coordinate3Data cd] : 'Coordinate3 {' pts= points '}' ;
+    // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:86:1: coordinate3 returns [Coordinate3Data cd] : 'Coordinate3' '{' pts= points '}' ;
     public final Coordinate3Data coordinate3() throws RecognitionException {
         Coordinate3Data cd = null;
 
@@ -924,18 +932,20 @@ public class OpenInventorParser extends Parser {
 
 
         try {
-            // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:86:44: ( 'Coordinate3 {' pts= points '}' )
-            // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:86:46: 'Coordinate3 {' pts= points '}'
+            // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:86:44: ( 'Coordinate3' '{' pts= points '}' )
+            // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:86:46: 'Coordinate3' '{' pts= points '}'
             {
-            match(input,10,FOLLOW_10_in_coordinate3449); 
+            match(input,10,FOLLOW_10_in_coordinate3455); 
 
-            pushFollow(FOLLOW_points_in_coordinate3453);
+            match(input,30,FOLLOW_30_in_coordinate3457); 
+
+            pushFollow(FOLLOW_points_in_coordinate3461);
             pts=points();
 
             state._fsp--;
 
 
-            match(input,29,FOLLOW_29_in_coordinate3455); 
+            match(input,31,FOLLOW_31_in_coordinate3463); 
 
 
             	cd = new Coordinate3Data(pts);
@@ -965,7 +975,7 @@ public class OpenInventorParser extends Parser {
 
 
     // $ANTLR start "points"
-    // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:90:1: points returns [ArrayList<Triple> pts] : 'point [' (t= triple ( ',' )? )+ ']' ;
+    // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:90:1: points returns [ArrayList<Triple> pts] : 'point' '[' (t= triple ( ',' )? )+ ']' ;
     public final ArrayList<Triple> points() throws RecognitionException {
         points_stack.push(new points_scope());
         ArrayList<Triple> pts = null;
@@ -976,12 +986,14 @@ public class OpenInventorParser extends Parser {
 
          ((points_scope)points_stack.peek()).ps = new ArrayList<Triple>(); 
         try {
-            // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:93:3: ( 'point [' (t= triple ( ',' )? )+ ']' )
-            // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:93:3: 'point [' (t= triple ( ',' )? )+ ']'
+            // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:93:3: ( 'point' '[' (t= triple ( ',' )? )+ ']' )
+            // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:93:3: 'point' '[' (t= triple ( ',' )? )+ ']'
             {
-            match(input,22,FOLLOW_22_in_points482); 
+            match(input,23,FOLLOW_23_in_points490); 
 
-            // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:93:13: (t= triple ( ',' )? )+
+            match(input,15,FOLLOW_15_in_points492); 
+
+            // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:93:15: (t= triple ( ',' )? )+
             int cnt5=0;
             loop5:
             do {
@@ -995,15 +1007,15 @@ public class OpenInventorParser extends Parser {
 
                 switch (alt5) {
             	case 1 :
-            	    // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:93:14: t= triple ( ',' )?
+            	    // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:93:16: t= triple ( ',' )?
             	    {
-            	    pushFollow(FOLLOW_triple_in_points487);
+            	    pushFollow(FOLLOW_triple_in_points497);
             	    t=triple();
 
             	    state._fsp--;
 
 
-            	    // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:93:23: ( ',' )?
+            	    // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:93:25: ( ',' )?
             	    int alt4=2;
             	    int LA4_0 = input.LA(1);
 
@@ -1012,9 +1024,9 @@ public class OpenInventorParser extends Parser {
             	    }
             	    switch (alt4) {
             	        case 1 :
-            	            // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:93:24: ','
+            	            // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:93:26: ','
             	            {
-            	            match(input,9,FOLLOW_9_in_points490); 
+            	            match(input,9,FOLLOW_9_in_points500); 
 
             	            }
             	            break;
@@ -1037,7 +1049,7 @@ public class OpenInventorParser extends Parser {
             } while (true);
 
 
-            match(input,15,FOLLOW_15_in_points498); 
+            match(input,16,FOLLOW_16_in_points508); 
 
 
             	pts = ((points_scope)points_stack.peek()).ps;
@@ -1062,7 +1074,7 @@ public class OpenInventorParser extends Parser {
 
 
     // $ANTLR start "indexedFaceSet"
-    // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:101:1: indexedFaceSet returns [IndexedFaceSetData ifsd] : 'IndexedFaceSet {' ci= coordIndex '}' ;
+    // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:101:1: indexedFaceSet returns [IndexedFaceSetData ifsd] : 'IndexedFaceSet' '{' ci= coordIndex '}' ;
     public final IndexedFaceSetData indexedFaceSet() throws RecognitionException {
         IndexedFaceSetData ifsd = null;
 
@@ -1071,18 +1083,20 @@ public class OpenInventorParser extends Parser {
 
 
         try {
-            // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:101:50: ( 'IndexedFaceSet {' ci= coordIndex '}' )
-            // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:101:52: 'IndexedFaceSet {' ci= coordIndex '}'
+            // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:101:50: ( 'IndexedFaceSet' '{' ci= coordIndex '}' )
+            // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:101:52: 'IndexedFaceSet' '{' ci= coordIndex '}'
             {
-            match(input,11,FOLLOW_11_in_indexedFaceSet515); 
+            match(input,11,FOLLOW_11_in_indexedFaceSet525); 
 
-            pushFollow(FOLLOW_coordIndex_in_indexedFaceSet519);
+            match(input,30,FOLLOW_30_in_indexedFaceSet527); 
+
+            pushFollow(FOLLOW_coordIndex_in_indexedFaceSet531);
             ci=coordIndex();
 
             state._fsp--;
 
 
-            match(input,29,FOLLOW_29_in_indexedFaceSet521); 
+            match(input,31,FOLLOW_31_in_indexedFaceSet533); 
 
              ifsd = ci; 
 
@@ -1110,7 +1124,7 @@ public class OpenInventorParser extends Parser {
 
 
     // $ANTLR start "coordIndex"
-    // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:102:1: coordIndex returns [IndexedFaceSetData ifsd] : 'coordIndex [' (i= integer ( ',' )? )+ ']' ;
+    // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:102:1: coordIndex returns [IndexedFaceSetData ifsd] : 'coordIndex' '[' (i= integer ( ',' )? )+ ']' ;
     public final IndexedFaceSetData coordIndex() throws RecognitionException {
         coordIndex_stack.push(new coordIndex_scope());
         IndexedFaceSetData ifsd = null;
@@ -1121,12 +1135,14 @@ public class OpenInventorParser extends Parser {
 
         	((coordIndex_scope)coordIndex_stack.peek()).data = new IndexedFaceSetData(); 
         try {
-            // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:105:2: ( 'coordIndex [' (i= integer ( ',' )? )+ ']' )
-            // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:105:4: 'coordIndex [' (i= integer ( ',' )? )+ ']'
+            // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:105:2: ( 'coordIndex' '[' (i= integer ( ',' )? )+ ']' )
+            // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:105:4: 'coordIndex' '[' (i= integer ( ',' )? )+ ']'
             {
-            match(input,17,FOLLOW_17_in_coordIndex547); 
+            match(input,18,FOLLOW_18_in_coordIndex559); 
 
-            // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:105:19: (i= integer ( ',' )? )+
+            match(input,15,FOLLOW_15_in_coordIndex561); 
+
+            // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:105:21: (i= integer ( ',' )? )+
             int cnt7=0;
             loop7:
             do {
@@ -1140,15 +1156,15 @@ public class OpenInventorParser extends Parser {
 
                 switch (alt7) {
             	case 1 :
-            	    // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:105:21: i= integer ( ',' )?
+            	    // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:105:23: i= integer ( ',' )?
             	    {
-            	    pushFollow(FOLLOW_integer_in_coordIndex553);
+            	    pushFollow(FOLLOW_integer_in_coordIndex567);
             	    i=integer();
 
             	    state._fsp--;
 
 
-            	    // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:105:31: ( ',' )?
+            	    // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:105:33: ( ',' )?
             	    int alt6=2;
             	    int LA6_0 = input.LA(1);
 
@@ -1157,9 +1173,9 @@ public class OpenInventorParser extends Parser {
             	    }
             	    switch (alt6) {
             	        case 1 :
-            	            // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:105:32: ','
+            	            // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:105:34: ','
             	            {
-            	            match(input,9,FOLLOW_9_in_coordIndex556); 
+            	            match(input,9,FOLLOW_9_in_coordIndex570); 
 
             	            }
             	            break;
@@ -1182,7 +1198,7 @@ public class OpenInventorParser extends Parser {
             } while (true);
 
 
-            match(input,15,FOLLOW_15_in_coordIndex565); 
+            match(input,16,FOLLOW_16_in_coordIndex579); 
 
 
             	ifsd = ((coordIndex_scope)coordIndex_stack.peek()).data;
@@ -1223,19 +1239,19 @@ public class OpenInventorParser extends Parser {
             // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:112:28: (r1= real r2= real r3= real )
             // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:112:30: r1= real r2= real r3= real
             {
-            pushFollow(FOLLOW_real_in_triple585);
+            pushFollow(FOLLOW_real_in_triple599);
             r1=real();
 
             state._fsp--;
 
 
-            pushFollow(FOLLOW_real_in_triple589);
+            pushFollow(FOLLOW_real_in_triple603);
             r2=real();
 
             state._fsp--;
 
 
-            pushFollow(FOLLOW_real_in_triple593);
+            pushFollow(FOLLOW_real_in_triple607);
             r3=real();
 
             state._fsp--;
@@ -1281,25 +1297,25 @@ public class OpenInventorParser extends Parser {
             // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:117:33: (r1= real r2= real r3= real r4= real )
             // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:117:35: r1= real r2= real r3= real r4= real
             {
-            pushFollow(FOLLOW_real_in_quadruple610);
+            pushFollow(FOLLOW_real_in_quadruple624);
             r1=real();
 
             state._fsp--;
 
 
-            pushFollow(FOLLOW_real_in_quadruple614);
+            pushFollow(FOLLOW_real_in_quadruple628);
             r2=real();
 
             state._fsp--;
 
 
-            pushFollow(FOLLOW_real_in_quadruple618);
+            pushFollow(FOLLOW_real_in_quadruple632);
             r3=real();
 
             state._fsp--;
 
 
-            pushFollow(FOLLOW_real_in_quadruple622);
+            pushFollow(FOLLOW_real_in_quadruple636);
             r4=real();
 
             state._fsp--;
@@ -1338,7 +1354,7 @@ public class OpenInventorParser extends Parser {
             // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:122:26: (r= REAL )
             // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:122:28: r= REAL
             {
-            r=(Token)match(input,REAL,FOLLOW_REAL_in_real639); 
+            r=(Token)match(input,REAL,FOLLOW_REAL_in_real653); 
 
              
             	d = Double.parseDouble((r!=null?r.getText():null));  
@@ -1373,7 +1389,7 @@ public class OpenInventorParser extends Parser {
             // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:127:26: (i= REAL )
             // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:127:28: i= REAL
             {
-            i=(Token)match(input,REAL,FOLLOW_REAL_in_integer656); 
+            i=(Token)match(input,REAL,FOLLOW_REAL_in_integer670); 
 
 
             	d = Integer.parseInt((i!=null?i.getText():null));
@@ -1401,70 +1417,77 @@ public class OpenInventorParser extends Parser {
 
     public static final BitSet FOLLOW_perspectiveCamera_in_openinventor44 = new BitSet(new long[]{0x0000000000002000L});
     public static final BitSet FOLLOW_separator_in_openinventor53 = new BitSet(new long[]{0x0000000000002002L});
-    public static final BitSet FOLLOW_12_in_perspectiveCamera78 = new BitSet(new long[]{0x0000000000800000L});
-    public static final BitSet FOLLOW_position_in_perspectiveCamera84 = new BitSet(new long[]{0x0000000000200000L});
-    public static final BitSet FOLLOW_orientation_in_perspectiveCamera90 = new BitSet(new long[]{0x0000000000100000L});
-    public static final BitSet FOLLOW_nearDistance_in_perspectiveCamera96 = new BitSet(new long[]{0x0000000000040000L});
-    public static final BitSet FOLLOW_farDistance_in_perspectiveCamera102 = new BitSet(new long[]{0x0000000000080000L});
-    public static final BitSet FOLLOW_left_in_perspectiveCamera108 = new BitSet(new long[]{0x0000000001000000L});
-    public static final BitSet FOLLOW_right_in_perspectiveCamera114 = new BitSet(new long[]{0x0000000008000000L});
-    public static final BitSet FOLLOW_top_in_perspectiveCamera120 = new BitSet(new long[]{0x0000000000010000L});
-    public static final BitSet FOLLOW_bottom_in_perspectiveCamera126 = new BitSet(new long[]{0x0000000020000000L});
-    public static final BitSet FOLLOW_29_in_perspectiveCamera128 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_23_in_position142 = new BitSet(new long[]{0x0000000000000080L});
-    public static final BitSet FOLLOW_triple_in_position146 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_21_in_orientation161 = new BitSet(new long[]{0x0000000000000080L});
-    public static final BitSet FOLLOW_quadruple_in_orientation165 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_20_in_nearDistance179 = new BitSet(new long[]{0x0000000000000080L});
-    public static final BitSet FOLLOW_real_in_nearDistance183 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_18_in_farDistance197 = new BitSet(new long[]{0x0000000000000080L});
-    public static final BitSet FOLLOW_real_in_farDistance201 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_19_in_left216 = new BitSet(new long[]{0x0000000000000080L});
-    public static final BitSet FOLLOW_real_in_left220 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_24_in_right234 = new BitSet(new long[]{0x0000000000000080L});
-    public static final BitSet FOLLOW_real_in_right238 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_27_in_top253 = new BitSet(new long[]{0x0000000000000080L});
-    public static final BitSet FOLLOW_real_in_top257 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_16_in_bottom271 = new BitSet(new long[]{0x0000000000000080L});
-    public static final BitSet FOLLOW_real_in_bottom275 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_13_in_separator305 = new BitSet(new long[]{0x0000000000004000L});
-    public static final BitSet FOLLOW_transform_in_separator310 = new BitSet(new long[]{0x0000000000004400L});
-    public static final BitSet FOLLOW_coordinate3_in_separator320 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_indexedFaceSet_in_separator326 = new BitSet(new long[]{0x0000000020000000L});
-    public static final BitSet FOLLOW_29_in_separator328 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_14_in_transform350 = new BitSet(new long[]{0x0000000016000000L});
-    public static final BitSet FOLLOW_translation_in_transform355 = new BitSet(new long[]{0x0000000036000000L});
-    public static final BitSet FOLLOW_rotation_in_transform362 = new BitSet(new long[]{0x0000000036000000L});
-    public static final BitSet FOLLOW_scaleFactor_in_transform369 = new BitSet(new long[]{0x0000000036000000L});
-    public static final BitSet FOLLOW_29_in_transform373 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_28_in_translation388 = new BitSet(new long[]{0x0000000000000080L});
-    public static final BitSet FOLLOW_triple_in_translation392 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_25_in_rotation407 = new BitSet(new long[]{0x0000000000000080L});
-    public static final BitSet FOLLOW_quadruple_in_rotation411 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_26_in_scaleFactor426 = new BitSet(new long[]{0x0000000000000080L});
-    public static final BitSet FOLLOW_triple_in_scaleFactor430 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_10_in_coordinate3449 = new BitSet(new long[]{0x0000000000400000L});
-    public static final BitSet FOLLOW_points_in_coordinate3453 = new BitSet(new long[]{0x0000000020000000L});
-    public static final BitSet FOLLOW_29_in_coordinate3455 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_22_in_points482 = new BitSet(new long[]{0x0000000000000080L});
-    public static final BitSet FOLLOW_triple_in_points487 = new BitSet(new long[]{0x0000000000008280L});
-    public static final BitSet FOLLOW_9_in_points490 = new BitSet(new long[]{0x0000000000008080L});
-    public static final BitSet FOLLOW_15_in_points498 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_11_in_indexedFaceSet515 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_coordIndex_in_indexedFaceSet519 = new BitSet(new long[]{0x0000000020000000L});
-    public static final BitSet FOLLOW_29_in_indexedFaceSet521 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_17_in_coordIndex547 = new BitSet(new long[]{0x0000000000000080L});
-    public static final BitSet FOLLOW_integer_in_coordIndex553 = new BitSet(new long[]{0x0000000000008280L});
-    public static final BitSet FOLLOW_9_in_coordIndex556 = new BitSet(new long[]{0x0000000000008080L});
-    public static final BitSet FOLLOW_15_in_coordIndex565 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_real_in_triple585 = new BitSet(new long[]{0x0000000000000080L});
-    public static final BitSet FOLLOW_real_in_triple589 = new BitSet(new long[]{0x0000000000000080L});
-    public static final BitSet FOLLOW_real_in_triple593 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_real_in_quadruple610 = new BitSet(new long[]{0x0000000000000080L});
-    public static final BitSet FOLLOW_real_in_quadruple614 = new BitSet(new long[]{0x0000000000000080L});
-    public static final BitSet FOLLOW_real_in_quadruple618 = new BitSet(new long[]{0x0000000000000080L});
-    public static final BitSet FOLLOW_real_in_quadruple622 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_REAL_in_real639 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_REAL_in_integer656 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_12_in_perspectiveCamera78 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_30_in_perspectiveCamera80 = new BitSet(new long[]{0x0000000001000000L});
+    public static final BitSet FOLLOW_position_in_perspectiveCamera86 = new BitSet(new long[]{0x0000000000400000L});
+    public static final BitSet FOLLOW_orientation_in_perspectiveCamera92 = new BitSet(new long[]{0x0000000000200000L});
+    public static final BitSet FOLLOW_nearDistance_in_perspectiveCamera98 = new BitSet(new long[]{0x0000000000080000L});
+    public static final BitSet FOLLOW_farDistance_in_perspectiveCamera104 = new BitSet(new long[]{0x0000000000100000L});
+    public static final BitSet FOLLOW_left_in_perspectiveCamera110 = new BitSet(new long[]{0x0000000002000000L});
+    public static final BitSet FOLLOW_right_in_perspectiveCamera116 = new BitSet(new long[]{0x0000000010000000L});
+    public static final BitSet FOLLOW_top_in_perspectiveCamera122 = new BitSet(new long[]{0x0000000000020000L});
+    public static final BitSet FOLLOW_bottom_in_perspectiveCamera128 = new BitSet(new long[]{0x0000000080000000L});
+    public static final BitSet FOLLOW_31_in_perspectiveCamera130 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_24_in_position144 = new BitSet(new long[]{0x0000000000000080L});
+    public static final BitSet FOLLOW_triple_in_position148 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_22_in_orientation163 = new BitSet(new long[]{0x0000000000000080L});
+    public static final BitSet FOLLOW_quadruple_in_orientation167 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_21_in_nearDistance181 = new BitSet(new long[]{0x0000000000000080L});
+    public static final BitSet FOLLOW_real_in_nearDistance185 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_19_in_farDistance199 = new BitSet(new long[]{0x0000000000000080L});
+    public static final BitSet FOLLOW_real_in_farDistance203 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_20_in_left218 = new BitSet(new long[]{0x0000000000000080L});
+    public static final BitSet FOLLOW_real_in_left222 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_25_in_right236 = new BitSet(new long[]{0x0000000000000080L});
+    public static final BitSet FOLLOW_real_in_right240 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_28_in_top255 = new BitSet(new long[]{0x0000000000000080L});
+    public static final BitSet FOLLOW_real_in_top259 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_17_in_bottom273 = new BitSet(new long[]{0x0000000000000080L});
+    public static final BitSet FOLLOW_real_in_bottom277 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_13_in_separator307 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_30_in_separator309 = new BitSet(new long[]{0x0000000000004000L});
+    public static final BitSet FOLLOW_transform_in_separator314 = new BitSet(new long[]{0x0000000000004400L});
+    public static final BitSet FOLLOW_coordinate3_in_separator324 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_indexedFaceSet_in_separator330 = new BitSet(new long[]{0x0000000080000000L});
+    public static final BitSet FOLLOW_31_in_separator332 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_14_in_transform354 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_30_in_transform356 = new BitSet(new long[]{0x000000002C000000L});
+    public static final BitSet FOLLOW_translation_in_transform361 = new BitSet(new long[]{0x00000000AC000000L});
+    public static final BitSet FOLLOW_rotation_in_transform368 = new BitSet(new long[]{0x00000000AC000000L});
+    public static final BitSet FOLLOW_scaleFactor_in_transform375 = new BitSet(new long[]{0x00000000AC000000L});
+    public static final BitSet FOLLOW_31_in_transform379 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_29_in_translation394 = new BitSet(new long[]{0x0000000000000080L});
+    public static final BitSet FOLLOW_triple_in_translation398 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_26_in_rotation413 = new BitSet(new long[]{0x0000000000000080L});
+    public static final BitSet FOLLOW_quadruple_in_rotation417 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_27_in_scaleFactor432 = new BitSet(new long[]{0x0000000000000080L});
+    public static final BitSet FOLLOW_triple_in_scaleFactor436 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_10_in_coordinate3455 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_30_in_coordinate3457 = new BitSet(new long[]{0x0000000000800000L});
+    public static final BitSet FOLLOW_points_in_coordinate3461 = new BitSet(new long[]{0x0000000080000000L});
+    public static final BitSet FOLLOW_31_in_coordinate3463 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_23_in_points490 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_15_in_points492 = new BitSet(new long[]{0x0000000000000080L});
+    public static final BitSet FOLLOW_triple_in_points497 = new BitSet(new long[]{0x0000000000010280L});
+    public static final BitSet FOLLOW_9_in_points500 = new BitSet(new long[]{0x0000000000010080L});
+    public static final BitSet FOLLOW_16_in_points508 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_11_in_indexedFaceSet525 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_30_in_indexedFaceSet527 = new BitSet(new long[]{0x0000000000040000L});
+    public static final BitSet FOLLOW_coordIndex_in_indexedFaceSet531 = new BitSet(new long[]{0x0000000080000000L});
+    public static final BitSet FOLLOW_31_in_indexedFaceSet533 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_18_in_coordIndex559 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_15_in_coordIndex561 = new BitSet(new long[]{0x0000000000000080L});
+    public static final BitSet FOLLOW_integer_in_coordIndex567 = new BitSet(new long[]{0x0000000000010280L});
+    public static final BitSet FOLLOW_9_in_coordIndex570 = new BitSet(new long[]{0x0000000000010080L});
+    public static final BitSet FOLLOW_16_in_coordIndex579 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_real_in_triple599 = new BitSet(new long[]{0x0000000000000080L});
+    public static final BitSet FOLLOW_real_in_triple603 = new BitSet(new long[]{0x0000000000000080L});
+    public static final BitSet FOLLOW_real_in_triple607 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_real_in_quadruple624 = new BitSet(new long[]{0x0000000000000080L});
+    public static final BitSet FOLLOW_real_in_quadruple628 = new BitSet(new long[]{0x0000000000000080L});
+    public static final BitSet FOLLOW_real_in_quadruple632 = new BitSet(new long[]{0x0000000000000080L});
+    public static final BitSet FOLLOW_real_in_quadruple636 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_REAL_in_real653 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_REAL_in_integer670 = new BitSet(new long[]{0x0000000000000002L});
 
 }

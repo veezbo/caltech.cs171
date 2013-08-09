@@ -2,6 +2,9 @@ package homework3;
 
 import java.util.ArrayList;
 
+/*
+ * Basically a generic class that holds 3 vertices
+ */
 public class Triangle {
 	
 	ArrayList<Vertex> verts;

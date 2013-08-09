@@ -4,6 +4,9 @@ import homework1.Matrix;
 
 import org.apache.commons.math3.linear.*;
 
+/*
+ * Class that holds all the Camera Data read in
+ */
 public class PerspectiveCameraData {
 	public Triple position;
 	public Quadruple orientation;

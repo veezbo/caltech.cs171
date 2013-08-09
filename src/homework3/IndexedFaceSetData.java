@@ -2,9 +2,13 @@ package homework3;
 
 import java.util.ArrayList;
 
+/*
+ * A more reasonable class that holds all the indices, and the normal indices as well
+ * Also, doesn't calculate the drawBetween because that's silly
+ */
 public class IndexedFaceSetData {
 	public ArrayList<Integer> indices = new ArrayList<Integer>();
-	public ArrayList<Boolean> drawBetween = new ArrayList<Boolean>();
+	//public ArrayList<Boolean> drawBetween = new ArrayList<Boolean>();
 	public ArrayList<Integer> nindices = new ArrayList<Integer>();
 	
 	public IndexedFaceSetData() {} // the actual constructor used

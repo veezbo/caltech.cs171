@@ -185,11 +185,11 @@ public class Canvas {
 	//and prints it out in PPM format to a file called output.ppm
 	public static void ppmGen(boolean[][] grid, int xRes, int yRes) throws IOException {
 		
-		PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter("output.ppm")));
+		//PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter("output.ppm")));
 		
-		out.println("P3");
-		out.println((xRes+1) + " " + (yRes+1)); //the dimensions are actually one more than xRes and yRes each
-		out.println("255\n");
+		System.out.println("P3");
+		System.out.println((xRes+1) + " " + (yRes+1)); //the dimensions are actually one more than xRes and yRes each
+		System.out.println("255\n");
 		
 		//looping through the y's first because arrays are silly and we need to rotate the grid
 		//so it's natural...
@@ -197,16 +197,16 @@ public class Canvas {
 			for (int x = 0; x <= xRes; x++) {
 				boolean check = grid[x][y];
 				if (check) {
-					out.println("255 255 255"); //print a white pixel
+					System.out.println("255 255 255"); //print a white pixel
 				}
 				else {
-					out.println("0 0 0"); //print a black pixel
+					System.out.println("0 0 0"); //print a black pixel
 				}
 					
 			}
 		}
 		
-		out.close();
+		//out.close();
 		
 	}
 }

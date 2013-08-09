@@ -9,6 +9,10 @@ import java.util.ArrayList;
 
 import org.apache.commons.math3.linear.*;
 
+/*
+ * The logic class of this assignment. Take all data structures, and apply the relevant transforms
+ * to all the points. 
+ */
 public class Wireframe {
 	
 	//default values
@@ -30,7 +34,6 @@ public class Wireframe {
 	}
 	
 	
-	
 	public void wireframe(int xRes, int yRes) throws IOException {
 		this.xRes = xRes;
 		this.yRes = yRes;
@@ -41,7 +44,7 @@ public class Wireframe {
 		ArrayList<Point> points = new ArrayList<Point>();
 		ArrayList<Boolean> drawBetween = new ArrayList<Boolean>();
 		
-		RealMatrix PCinv = Matrix.mult(oid.pcd.P, oid.pcd.Cinv);	
+		RealMatrix PCinv = Matrix.mult(oid.pcd.P, oid.pcd.Cinv);
 		
 		int size = oid.sds.size();
 		for (int i = 0; i < size; i++) {
@@ -50,7 +53,7 @@ public class Wireframe {
 			
 			int len = sd.ifs.indices.size();
 			for (int j = 0; j < len; j++) {
-				//Get the Indexed Point as indicated by IndexedFaceSet, and conver to a RealVector
+				//Get the Indexed Point as indicated by IndexedFaceSet, and convert to a RealVector
 				Triple xyz = sd.cd.points.get(sd.ifs.indices.get(j));
 				RealVector v = Matrix.createHomogenizedVector(xyz.data);
 				

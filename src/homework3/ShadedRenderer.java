@@ -11,6 +11,9 @@ import homework2.Triple;
 public class ShadedRenderer {
 	
 	Canvas c;
+	static final int FLAT_SHADING = 0;
+    static final int GOURAND_SHADING = 1;
+    static final int PHONG_SHADING = 2;
 	
 	public ShadedRenderer(Canvas c) {
 		this.c = c;
@@ -53,9 +56,9 @@ public class ShadedRenderer {
 				}
 			}
 			
-			if (n==0) flatShading(xRes, yRes, oid, sd, faces);
-			if (n==1) gourandShading(xRes, yRes, oid, sd, faces);
-			if (n==2) phongShading(xRes, yRes, oid, sd, faces);
+			if (n==FLAT_SHADING) flatShading(xRes, yRes, oid, sd, faces);
+			if (n==GOURAND_SHADING) gourandShading(xRes, yRes, oid, sd, faces);
+			if (n==PHONG_SHADING) phongShading(xRes, yRes, oid, sd, faces);
 		}
 	}
 	
@@ -179,7 +182,7 @@ public class ShadedRenderer {
 				}
 				
 				pixels = Raster.raster(verts, c, 2);
-				
+				if (pixels == null) continue;
 				for (Vertex pixel : pixels) {
 					//Call the lighting function on all of the returned pixels
 					//Then, call the drawPixel method on these pixels and their values

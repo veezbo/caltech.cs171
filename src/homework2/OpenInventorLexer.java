@@ -1,6 +1,6 @@
 package homework2;
 
-// $ANTLR 3.4 C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g 2012-11-22 05:07:12
+// $ANTLR 3.4 C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g 2013-03-29 00:11:15
 
 import org.antlr.runtime.*;
 import java.util.Stack;
@@ -31,6 +31,8 @@ public class OpenInventorLexer extends Lexer {
     public static final int T__27=27;
     public static final int T__28=28;
     public static final int T__29=29;
+    public static final int T__30=30;
+    public static final int T__31=31;
     public static final int COMMENT=4;
     public static final int HASH=5;
     public static final int INT=6;
@@ -78,10 +80,10 @@ public class OpenInventorLexer extends Lexer {
         try {
             int _type = T__10;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:3:7: ( 'Coordinate3 {' )
-            // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:3:9: 'Coordinate3 {'
+            // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:3:7: ( 'Coordinate3' )
+            // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:3:9: 'Coordinate3'
             {
-            match("Coordinate3 {"); 
+            match("Coordinate3"); 
 
 
 
@@ -101,10 +103,10 @@ public class OpenInventorLexer extends Lexer {
         try {
             int _type = T__11;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:4:7: ( 'IndexedFaceSet {' )
-            // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:4:9: 'IndexedFaceSet {'
+            // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:4:7: ( 'IndexedFaceSet' )
+            // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:4:9: 'IndexedFaceSet'
             {
-            match("IndexedFaceSet {"); 
+            match("IndexedFaceSet"); 
 
 
 
@@ -124,10 +126,10 @@ public class OpenInventorLexer extends Lexer {
         try {
             int _type = T__12;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:5:7: ( 'PerspectiveCamera {' )
-            // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:5:9: 'PerspectiveCamera {'
+            // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:5:7: ( 'PerspectiveCamera' )
+            // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:5:9: 'PerspectiveCamera'
             {
-            match("PerspectiveCamera {"); 
+            match("PerspectiveCamera"); 
 
 
 
@@ -147,10 +149,10 @@ public class OpenInventorLexer extends Lexer {
         try {
             int _type = T__13;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:6:7: ( 'Separator {' )
-            // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:6:9: 'Separator {'
+            // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:6:7: ( 'Separator' )
+            // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:6:9: 'Separator'
             {
-            match("Separator {"); 
+            match("Separator"); 
 
 
 
@@ -170,10 +172,10 @@ public class OpenInventorLexer extends Lexer {
         try {
             int _type = T__14;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:7:7: ( 'Transform {' )
-            // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:7:9: 'Transform {'
+            // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:7:7: ( 'Transform' )
+            // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:7:9: 'Transform'
             {
-            match("Transform {"); 
+            match("Transform"); 
 
 
 
@@ -193,10 +195,10 @@ public class OpenInventorLexer extends Lexer {
         try {
             int _type = T__15;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:8:7: ( ']' )
-            // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:8:9: ']'
+            // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:8:7: ( '[' )
+            // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:8:9: '['
             {
-            match(']'); 
+            match('['); 
 
             }
 
@@ -214,12 +216,10 @@ public class OpenInventorLexer extends Lexer {
         try {
             int _type = T__16;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:9:7: ( 'bottom' )
-            // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:9:9: 'bottom'
+            // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:9:7: ( ']' )
+            // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:9:9: ']'
             {
-            match("bottom"); 
-
-
+            match(']'); 
 
             }
 
@@ -237,10 +237,10 @@ public class OpenInventorLexer extends Lexer {
         try {
             int _type = T__17;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:10:7: ( 'coordIndex [' )
-            // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:10:9: 'coordIndex ['
+            // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:10:7: ( 'bottom' )
+            // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:10:9: 'bottom'
             {
-            match("coordIndex ["); 
+            match("bottom"); 
 
 
 
@@ -260,10 +260,10 @@ public class OpenInventorLexer extends Lexer {
         try {
             int _type = T__18;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:11:7: ( 'farDistance' )
-            // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:11:9: 'farDistance'
+            // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:11:7: ( 'coordIndex' )
+            // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:11:9: 'coordIndex'
             {
-            match("farDistance"); 
+            match("coordIndex"); 
 
 
 
@@ -283,10 +283,10 @@ public class OpenInventorLexer extends Lexer {
         try {
             int _type = T__19;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:12:7: ( 'left' )
-            // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:12:9: 'left'
+            // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:12:7: ( 'farDistance' )
+            // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:12:9: 'farDistance'
             {
-            match("left"); 
+            match("farDistance"); 
 
 
 
@@ -306,10 +306,10 @@ public class OpenInventorLexer extends Lexer {
         try {
             int _type = T__20;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:13:7: ( 'nearDistance' )
-            // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:13:9: 'nearDistance'
+            // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:13:7: ( 'left' )
+            // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:13:9: 'left'
             {
-            match("nearDistance"); 
+            match("left"); 
 
 
 
@@ -329,10 +329,10 @@ public class OpenInventorLexer extends Lexer {
         try {
             int _type = T__21;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:14:7: ( 'orientation' )
-            // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:14:9: 'orientation'
+            // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:14:7: ( 'nearDistance' )
+            // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:14:9: 'nearDistance'
             {
-            match("orientation"); 
+            match("nearDistance"); 
 
 
 
@@ -352,10 +352,10 @@ public class OpenInventorLexer extends Lexer {
         try {
             int _type = T__22;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:15:7: ( 'point [' )
-            // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:15:9: 'point ['
+            // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:15:7: ( 'orientation' )
+            // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:15:9: 'orientation'
             {
-            match("point ["); 
+            match("orientation"); 
 
 
 
@@ -375,10 +375,10 @@ public class OpenInventorLexer extends Lexer {
         try {
             int _type = T__23;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:16:7: ( 'position' )
-            // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:16:9: 'position'
+            // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:16:7: ( 'point' )
+            // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:16:9: 'point'
             {
-            match("position"); 
+            match("point"); 
 
 
 
@@ -398,10 +398,10 @@ public class OpenInventorLexer extends Lexer {
         try {
             int _type = T__24;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:17:7: ( 'right' )
-            // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:17:9: 'right'
+            // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:17:7: ( 'position' )
+            // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:17:9: 'position'
             {
-            match("right"); 
+            match("position"); 
 
 
 
@@ -421,10 +421,10 @@ public class OpenInventorLexer extends Lexer {
         try {
             int _type = T__25;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:18:7: ( 'rotation' )
-            // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:18:9: 'rotation'
+            // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:18:7: ( 'right' )
+            // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:18:9: 'right'
             {
-            match("rotation"); 
+            match("right"); 
 
 
 
@@ -444,10 +444,10 @@ public class OpenInventorLexer extends Lexer {
         try {
             int _type = T__26;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:19:7: ( 'scaleFactor' )
-            // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:19:9: 'scaleFactor'
+            // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:19:7: ( 'rotation' )
+            // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:19:9: 'rotation'
             {
-            match("scaleFactor"); 
+            match("rotation"); 
 
 
 
@@ -467,10 +467,10 @@ public class OpenInventorLexer extends Lexer {
         try {
             int _type = T__27;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:20:7: ( 'top' )
-            // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:20:9: 'top'
+            // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:20:7: ( 'scaleFactor' )
+            // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:20:9: 'scaleFactor'
             {
-            match("top"); 
+            match("scaleFactor"); 
 
 
 
@@ -490,10 +490,10 @@ public class OpenInventorLexer extends Lexer {
         try {
             int _type = T__28;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:21:7: ( 'translation' )
-            // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:21:9: 'translation'
+            // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:21:7: ( 'top' )
+            // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:21:9: 'top'
             {
-            match("translation"); 
+            match("top"); 
 
 
 
@@ -513,8 +513,52 @@ public class OpenInventorLexer extends Lexer {
         try {
             int _type = T__29;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:22:7: ( '}' )
-            // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:22:9: '}'
+            // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:22:7: ( 'translation' )
+            // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:22:9: 'translation'
+            {
+            match("translation"); 
+
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        	// do for sure before leaving
+        }
+    }
+    // $ANTLR end "T__29"
+
+    // $ANTLR start "T__30"
+    public final void mT__30() throws RecognitionException {
+        try {
+            int _type = T__30;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:23:7: ( '{' )
+            // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:23:9: '{'
+            {
+            match('{'); 
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        	// do for sure before leaving
+        }
+    }
+    // $ANTLR end "T__30"
+
+    // $ANTLR start "T__31"
+    public final void mT__31() throws RecognitionException {
+        try {
+            int _type = T__31;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:24:7: ( '}' )
+            // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:24:9: '}'
             {
             match('}'); 
 
@@ -527,7 +571,7 @@ public class OpenInventorLexer extends Lexer {
         	// do for sure before leaving
         }
     }
-    // $ANTLR end "T__29"
+    // $ANTLR end "T__31"
 
     // $ANTLR start "COMMENT"
     public final void mCOMMENT() throws RecognitionException {
@@ -821,8 +865,8 @@ public class OpenInventorLexer extends Lexer {
     // $ANTLR end "INT"
 
     public void mTokens() throws RecognitionException {
-        // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:1:8: ( T__9 | T__10 | T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | COMMENT | WHITESPACE | HASH | REAL )
-        int alt7=25;
+        // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:1:8: ( T__9 | T__10 | T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | COMMENT | WHITESPACE | HASH | REAL )
+        int alt7=27;
         switch ( input.LA(1) ) {
         case ',':
             {
@@ -854,80 +898,66 @@ public class OpenInventorLexer extends Lexer {
             alt7=6;
             }
             break;
-        case ']':
+        case '[':
             {
             alt7=7;
             }
             break;
-        case 'b':
+        case ']':
             {
             alt7=8;
             }
             break;
-        case 'c':
+        case 'b':
             {
             alt7=9;
             }
             break;
-        case 'f':
+        case 'c':
             {
             alt7=10;
             }
             break;
-        case 'l':
+        case 'f':
             {
             alt7=11;
             }
             break;
-        case 'n':
+        case 'l':
             {
             alt7=12;
             }
             break;
-        case 'o':
+        case 'n':
             {
             alt7=13;
             }
             break;
+        case 'o':
+            {
+            alt7=14;
+            }
+            break;
         case 'p':
             {
-            int LA7_14 = input.LA(2);
+            int LA7_15 = input.LA(2);
 
-            if ( (LA7_14=='o') ) {
-                int LA7_22 = input.LA(3);
+            if ( (LA7_15=='o') ) {
+                int LA7_24 = input.LA(3);
 
-                if ( (LA7_22=='i') ) {
-                    alt7=14;
-                }
-                else if ( (LA7_22=='s') ) {
+                if ( (LA7_24=='i') ) {
                     alt7=15;
+                }
+                else if ( (LA7_24=='s') ) {
+                    alt7=16;
                 }
                 else {
                     NoViableAltException nvae =
-                        new NoViableAltException("", 7, 22, input);
+                        new NoViableAltException("", 7, 24, input);
 
                     throw nvae;
 
                 }
-            }
-            else {
-                NoViableAltException nvae =
-                    new NoViableAltException("", 7, 14, input);
-
-                throw nvae;
-
-            }
-            }
-            break;
-        case 'r':
-            {
-            int LA7_15 = input.LA(2);
-
-            if ( (LA7_15=='i') ) {
-                alt7=16;
-            }
-            else if ( (LA7_15=='o') ) {
-                alt7=17;
             }
             else {
                 NoViableAltException nvae =
@@ -938,44 +968,68 @@ public class OpenInventorLexer extends Lexer {
             }
             }
             break;
-        case 's':
+        case 'r':
             {
-            alt7=18;
-            }
-            break;
-        case 't':
-            {
-            int LA7_17 = input.LA(2);
+            int LA7_16 = input.LA(2);
 
-            if ( (LA7_17=='o') ) {
-                alt7=19;
+            if ( (LA7_16=='i') ) {
+                alt7=17;
             }
-            else if ( (LA7_17=='r') ) {
-                alt7=20;
+            else if ( (LA7_16=='o') ) {
+                alt7=18;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 7, 17, input);
+                    new NoViableAltException("", 7, 16, input);
 
                 throw nvae;
 
             }
             }
             break;
+        case 's':
+            {
+            alt7=19;
+            }
+            break;
+        case 't':
+            {
+            int LA7_18 = input.LA(2);
+
+            if ( (LA7_18=='o') ) {
+                alt7=20;
+            }
+            else if ( (LA7_18=='r') ) {
+                alt7=21;
+            }
+            else {
+                NoViableAltException nvae =
+                    new NoViableAltException("", 7, 18, input);
+
+                throw nvae;
+
+            }
+            }
+            break;
+        case '{':
+            {
+            alt7=22;
+            }
+            break;
         case '}':
             {
-            alt7=21;
+            alt7=23;
             }
             break;
         case '#':
             {
-            int LA7_19 = input.LA(2);
+            int LA7_21 = input.LA(2);
 
-            if ( ((LA7_19 >= '\u0000' && LA7_19 <= '\uFFFF')) ) {
-                alt7=22;
+            if ( ((LA7_21 >= '\u0000' && LA7_21 <= '\uFFFF')) ) {
+                alt7=24;
             }
             else {
-                alt7=24;
+                alt7=26;
             }
             }
             break;
@@ -984,7 +1038,7 @@ public class OpenInventorLexer extends Lexer {
         case '\r':
         case ' ':
             {
-            alt7=23;
+            alt7=25;
             }
             break;
         case '-':
@@ -1000,7 +1054,7 @@ public class OpenInventorLexer extends Lexer {
         case '8':
         case '9':
             {
-            alt7=25;
+            alt7=27;
             }
             break;
         default:
@@ -1181,31 +1235,47 @@ public class OpenInventorLexer extends Lexer {
                 }
                 break;
             case 22 :
-                // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:1:135: COMMENT
+                // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:1:135: T__30
+                {
+                mT__30(); 
+
+
+                }
+                break;
+            case 23 :
+                // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:1:141: T__31
+                {
+                mT__31(); 
+
+
+                }
+                break;
+            case 24 :
+                // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:1:147: COMMENT
                 {
                 mCOMMENT(); 
 
 
                 }
                 break;
-            case 23 :
-                // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:1:143: WHITESPACE
+            case 25 :
+                // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:1:155: WHITESPACE
                 {
                 mWHITESPACE(); 
 
 
                 }
                 break;
-            case 24 :
-                // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:1:154: HASH
+            case 26 :
+                // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:1:166: HASH
                 {
                 mHASH(); 
 
 
                 }
                 break;
-            case 25 :
-                // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:1:159: REAL
+            case 27 :
+                // C:\\Users\\theonly\\Desktop\\Programming\\ANTLR Lexer and Parser Code\\OpenInventor.g:1:171: REAL
                 {
                 mREAL(); 
 

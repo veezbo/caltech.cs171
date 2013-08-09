@@ -19,6 +19,7 @@ public class CallbackListener implements KeyListener, MouseListener {
 	GLCanvas canvas;
 	NURBSEditor nurbs;
 	
+	//Parametrization Functions that convert pixel value (xRes, yRes) to screen value (-1, 1)
 	private double parametrizeX(int x) {
 		return (double) (x - ((double) xRes)/2.) / (((double) xRes) / 2.);
 	}
@@ -36,39 +37,9 @@ public class CallbackListener implements KeyListener, MouseListener {
 
 	@Override
 	public void keyTyped(KeyEvent e) {
+		//End program on q, Q, or Esc
 		if (e.getKeyCode() == 27 || e.getKeyChar() == 'q' || e.getKeyChar() == 'Q')
 			System.exit(0);
-	}
-
-	@Override
-	public void keyPressed(KeyEvent e) {
-		// TODO Auto-generated method stub
-	}
-
-	@Override
-	public void keyReleased(KeyEvent e) {
-		// TODO Auto-generated method stub
-	}
-
-	@Override
-	public void mouseClicked(MouseEvent m) {
-		
-	}
-
-	public void mouseDragged(MouseEvent m) {
-		
-	}
-
-	@Override
-	public void mouseEntered(MouseEvent arg0) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void mouseExited(MouseEvent arg0) {
-		// TODO Auto-generated method stub
-		
 	}
 
 	int x, y;
@@ -81,9 +52,7 @@ public class CallbackListener implements KeyListener, MouseListener {
 	//Process a right click
 		if (m.getButton() == 3) {
 			
-//			System.out.println("RIGHT CLICK");
-			
-		//finding the new knot value 
+			//finding the new knot value 
 			x = m.getX();
 			y = m.getY();
 			X = parametrizeX(x);
@@ -102,16 +71,14 @@ public class CallbackListener implements KeyListener, MouseListener {
 			}
 			if (tprime == -10) return;
 			
-		//calculating the insertion point of the new knot
+			//calculating the insertion point of the new knot
 			int insert = Collections.binarySearch(nurbs.t, tprime);
 			if (insert < 0) insert = -1 * (insert + 1);
-			//nurbs.t.add(insert, tprime);
 			
-		//creating the new control point arraylist
+			//creating the new control point arraylist
 			int n = P.size() - 1;
 			ArrayList<Point> Pn = new ArrayList<Point>(n+2);
-			//dummy point
-			Pn.add(new Point(-1, -1));
+			Pn.add(new Point(-1, -1)); //dummy point
 		
 			for (int i = 1; i <= n+1; i++) {
 				if (i==1) {
@@ -143,7 +110,7 @@ public class CallbackListener implements KeyListener, MouseListener {
 			nurbs.canvas.display();
 		}
 		
-		//Process a left click
+	//Process a left click
 		else if (m.getButton() == 1) {
 			
 			x = m.getX();
@@ -153,17 +120,13 @@ public class CallbackListener implements KeyListener, MouseListener {
 			
 			int n = P.size() - 1;
 			
-			//System.out.println(X + " " + Y);
-			
 			//check if the clicked portion is within the bounds of a control point
 			for (int i = 1; i <= n; i++) {
 				if (Math.abs(X - P.get(i).x) <= 0.02 && Math.abs(Y - P.get(i).y) <= 0.02) {
 					clickedIndex = i;
-//					System.out.println("IN");
 					return;
 				}
 			}
-//			System.out.println("OUT");
 			
 		}
 		
@@ -179,25 +142,31 @@ public class CallbackListener implements KeyListener, MouseListener {
 		
 		if (clickedIndex == -1) return;
 		
-		/* GL2 gl = canvas.getGL().getGL2();
-		gl.glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
-	 	gl.glClear(GL.GL_COLOR_BUFFER_BIT); */
-	 	
-
-		//canvas.destroy();
-		
-		
 		//We're going to assume there was some kind of a drag here if the previous clicked point is reasonable
 		P.set( clickedIndex, new Point(parametrizeX(m.getX()), parametrizeY(m.getY())) );
 		nurbs.P = this.P;
 		
 		nurbs.canvas.display();
 		
-		//Reset clickedIndex, x, y, X, and Y
+		//Reset variables
 		clickedIndex = -1;
 		x = -1;
 		y = -1;
 		X = -5;
 		Y = -5;
 	}
+	
+	
+//UNUSED METHODS
+	@Override
+	public void keyPressed(KeyEvent e) {}
+	@Override
+	public void keyReleased(KeyEvent e) {}
+	@Override
+	public void mouseClicked(MouseEvent m) {}
+	public void mouseDragged(MouseEvent m) {}
+	@Override
+	public void mouseEntered(MouseEvent arg0) {}
+	@Override
+	public void mouseExited(MouseEvent arg0) {}
 }

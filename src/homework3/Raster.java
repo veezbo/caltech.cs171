@@ -33,18 +33,7 @@ public class Raster {
 	static int getPixelY (float y) {
 		return (int)((y - windowYMin) / (windowYMax - windowYMin) * yRes);
 	}
-	
-	
-	/* static class vertex {
-		public float[] data;
-		int numData;
-		public vertex (float[] data, int numData) {
-			this.data = data;
-			this.numData = numData;
-		}
-	} */
-	
-	
+		
 	static int f (RasterCoord vert0, RasterCoord vert1, int x, int y) {
 		int x0 = vert0.x;
 		int y0 = vert0.y;

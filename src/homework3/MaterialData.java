@@ -2,6 +2,9 @@ package homework3;
 
 import homework2.Triple;
 
+/*
+ * Holds all the ObjectData read in from the file
+ */
 public class MaterialData {
 	public Triple ambientColor = new Triple (.2, .2, .2);
 	public Triple diffuseColor = new Triple (.8, .8, .8);

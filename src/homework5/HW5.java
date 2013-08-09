@@ -22,7 +22,6 @@ public class HW5 {
     	GLCanvas canvas = new GLCanvas(capabilities);
     	canvas.setSize( xRes , yRes );
     	
-    	
     	NURBSEditor nurbs = new NURBSEditor(xRes, yRes, canvas);
     	
     	// keyboard event handler
@@ -50,11 +49,7 @@ public class HW5 {
         frame.setLocation(50, 50);
         frame.setSize( xRes, yRes );
         frame.setVisible( true );
-        
-        //nurbs.coxDeBoor();
-        
-        //FPSAnimator animator = new FPSAnimator(canvas, 60, true);
-        //animator.start();
+
 	}
 
 }

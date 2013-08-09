@@ -2,11 +2,16 @@ package homework3;
 
 import homework2.Triple;
 
+
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+/*
+ * A more reasonable Canvas class, that only draws individual pixels, and then overall generates the ppm based
+ * on those pixels
+ */
 public class Canvas {
 	
 	Vertex[][] grid;

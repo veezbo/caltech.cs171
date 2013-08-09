@@ -6,10 +6,12 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
 
+/*
+ * Class that keeps track of key presses and mouse movements
+ */
 public class CallbackListener implements KeyListener, MouseListener, MouseMotionListener {
 	
 	int savedx, savedy;
-	
 	Renderer r;
 	
 	public CallbackListener(Renderer r) {
@@ -37,49 +39,24 @@ public class CallbackListener implements KeyListener, MouseListener, MouseMotion
 		}
 	}
 
+//UNUSED METHODS
 	@Override
-	public void keyPressed(KeyEvent e) {
-
-	}
-
+	public void keyPressed(KeyEvent e) {}
 	@Override
-	public void keyReleased(KeyEvent e) {
-
-	}
-
+	public void keyReleased(KeyEvent e) {}
 	@Override
-	public void mouseClicked(MouseEvent e) {
-		
-	}
-
+	public void mouseClicked(MouseEvent e) {}
 	@Override
-	public void mouseEntered(MouseEvent e) {
-		
-	}
-
+	public void mouseEntered(MouseEvent e) {}
 	@Override
-	public void mouseExited(MouseEvent e) {
-		
-	}
-
+	public void mouseExited(MouseEvent e) {}
 	@Override
-	public void mousePressed(MouseEvent m) {
-		//TODO: Add in mouse transformations/rotations later
-	}
-
+	public void mousePressed(MouseEvent m) {}
 	@Override
-	public void mouseReleased(MouseEvent e) {
-		
-	}
-
+	public void mouseReleased(MouseEvent e) {}
 	@Override
-	public void mouseDragged(MouseEvent arg0) {
-		
-	}
-
+	public void mouseDragged(MouseEvent arg0) {}
 	@Override
-	public void mouseMoved(MouseEvent arg0) {
-		
-	}
+	public void mouseMoved(MouseEvent arg0) {}
 	
 }

@@ -21,23 +21,33 @@ public class HW4 {
 
 	public static void main(String[] args) throws IOException, RecognitionException {
 		
-	//Parse in Data
-		final String FILE = "fourCubes.iv";	
-		ANTLRInputStream input = new ANTLRInputStream(new FileInputStream(FILE));
+	//Parse Input
+		//ANTLRInputStream input = new ANTLRInputStream(new FileInputStream(FILE));
+        ANTLRInputStream input = new ANTLRInputStream(System.in);
         OpenInventorNewLexer lexer = new OpenInventorNewLexer(input);
         CommonTokenStream tokens = new CommonTokenStream(lexer);
         OpenInventorNewParser parser = new OpenInventorNewParser(tokens);
         
         OpenInventorData oid = parser.openinventor();
+
+        int xRes, yRes;
+        if (args.length < 2) {
+            xRes = 600;
+            yRes = 600;
+        }
+        else {
+            xRes = Integer.parseInt(args[0]);
+            yRes = Integer.parseInt(args[1]);
+        }
 		
         
     //Set up OpenGL
     	GLProfile profile = GLProfile.get(GLProfile.GL2);
     	GLCapabilities capabilities = new GLCapabilities(profile);
- 
+        
     	// The canvas is the widget that's drawn in the JFrame
     	GLCanvas canvas = new GLCanvas(capabilities);
-    	canvas.setSize( 600, 600 );
+    	canvas.setSize( xRes , yRes );
     	
     	// Renderer object to be used for the canvas
     	Renderer r = new Renderer(oid, canvas);

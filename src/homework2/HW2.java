@@ -4,28 +4,36 @@ import java.io.*;
 import org.antlr.runtime.*;
 
 public class HW2 {
-	
-	static final int xRes=400, yRes=400;
-	
+		
 	static OpenInventorData oid;
 
 	public static void main(String[] args) throws FileNotFoundException, IOException, RecognitionException {
 		
-		final String FILE = "cube.iv";
-		
-		ANTLRInputStream input = new ANTLRInputStream(new FileInputStream(FILE));
+	//Parsing Input
+		//ANTLRInputStream input = new ANTLRInputStream(new FileInputStream(FILE));
+		ANTLRInputStream input = new ANTLRInputStream(System.in);
         OpenInventorLexer lexer = new OpenInventorLexer(input);
         CommonTokenStream tokens = new CommonTokenStream(lexer);
         OpenInventorParser parser = new OpenInventorParser(tokens);
                 	
         oid = parser.openinventor();
-        
-        final int xRes=400, yRes=400;
-        
+    
+    //Pixel Size of Window
+        int xRes, yRes;
+        if (args.length < 2) {
+            xRes = 400;
+            yRes = 400;
+        }
+        else {
+            xRes = Integer.parseInt(args[0]);
+            yRes = Integer.parseInt(args[1]);
+        }
+    
+    //Run Wireframe Program
         Wireframe w = new Wireframe(oid);
         w.wireframe(xRes, yRes);
         
-        System.out.println("End of Program");
+        //System.out.println("End of Program");
         
         System.exit(0);
 	}

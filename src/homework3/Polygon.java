@@ -2,6 +2,9 @@ package homework3;
 
 import java.util.ArrayList;
 
+/*
+ * A class that triangulates the points given as input, and then saves the resulting triangles for computation
+ */
 public class Polygon {
 	
 	public ArrayList<Triangle> triangles = new ArrayList<Triangle>();

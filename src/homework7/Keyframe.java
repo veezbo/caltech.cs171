@@ -11,7 +11,7 @@ public class Keyframe {
 	
 	int frameNumber;
 	
-	public Keyframe(Triple translation, Triple scale, Quadruple rotation,int frameNumber) {
+	public Keyframe(Triple translation, Triple scale, Quadruple rotation, int frameNumber) {
 		this.translation = translation;
 		this.rotation = rotation;
 		this.scale = scale;

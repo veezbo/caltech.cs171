@@ -4,6 +4,10 @@ import homework1.Matrix;
 
 import org.apache.commons.math3.linear.*;
 
+/*
+ * Class to hold all of the transforms for a particular transformdata block.
+ * Preprocessing done to calculate the overall individual transform for this block.
+ */
 public class TransformData {
 	
 	public Triple translation;

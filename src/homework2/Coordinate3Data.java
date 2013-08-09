@@ -2,6 +2,9 @@ package homework2;
 
 import java.util.ArrayList;
 
+/*
+ * Class to Hold the Points
+ */
 public class Coordinate3Data {
 	
 	public ArrayList<Triple> points = new ArrayList<Triple>();

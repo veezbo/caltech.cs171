@@ -2,6 +2,9 @@ package homework2;
 
 import java.util.ArrayList;
 
+/*
+ * Class to hold indices set read in. Preprocessing done to indicate whether we draw between two points or not
+ */
 public class IndexedFaceSetData {
 	ArrayList<Integer> indices = new ArrayList<Integer>();
 	ArrayList<Boolean> drawBetween = new ArrayList<Boolean>();

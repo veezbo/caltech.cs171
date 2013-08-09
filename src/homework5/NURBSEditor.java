@@ -45,10 +45,6 @@ public class NURBSEditor implements GLEventListener {
 	
 	public void coxDeBoor () {
 	
-		//reset = true;
-		//canvas.display();
-		//reset = false;
-		
 		drawnNurbs.clear();
 		uvals.clear();
 		
@@ -96,23 +92,10 @@ public class NURBSEditor implements GLEventListener {
 				linComb = Point.add(linComb, P.get(i).mult(N[i][4]));
 			}
 			
-			//System.out.println(linComb);
-			
-			//x = linComb.x;
-			//y = linComb.y;
-			//canvas.display();
-			
 			drawnNurbs.add(linComb);
 			uvals.add(u);
 		}
 		
-		/*reset = true;
-		canvas.display();
-		reset = false; */
-		
-		//System.out.println(drawnNurbs);
-		//System.out.println(uvals);
-				
 	}
 	
 	private void clearScreen(GLAutoDrawable drawable) {
@@ -125,15 +108,7 @@ public class NURBSEditor implements GLEventListener {
 
 	@Override
 	public void init(GLAutoDrawable drawable) {
-	//	System.out.println("INIT CALLED");
 		GL2 gl = drawable.getGL().getGL2();
-	 	
-	 	/*gl.glMatrixMode (GL2.GL_PROJECTION);
-	 	gl.glLoadIdentity ();
-	 	gl.glOrtho (0, xRes, yRes, 0, 0, 1);
-	 	
-	 	gl.glMatrixMode (GL2.GL_MODELVIEW);
-	 	gl.glDisable(GL2.GL_DEPTH_TEST); */
 	 	
 	 	gl.glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
 	 	gl.glClear(GL2.GL_COLOR_BUFFER_BIT | GL2.GL_DEPTH_BUFFER_BIT);
@@ -142,43 +117,15 @@ public class NURBSEditor implements GLEventListener {
 	 	glu = new GLU();
 	}
 	
-	//private boolean reset = false;
-	boolean first = true;
 	@Override
 	public void display(GLAutoDrawable drawable) {
-		
-		/*if (reset) {
-			this.clearScreen(drawable);
-			reset = false;
-			return;
-		}*/
-		
+				
 		this.clearScreen(drawable);
-		
-		if (first) {
-			//System.out.println("DISPLAY CALLED");
-			first = false;
-		}
-		
 		this.coxDeBoor();
 		
-		//render(drawable);
 		drawSpline(drawable);
 		displayPolyLine(drawable);
 	}
-	
-	/* //resetting method
-	private void drawBlackRectangle(GLAutoDrawable drawable, int H, int W) {
-		GL2 gl = drawable.getGL().getGL2();
-		
-		gl.glBegin(GL2.GL_QUADS);
-		gl.glColor3d(1., 0., 0.);
-		gl.glVertex3d(-1, -1, -1);
-		gl.glVertex3d(-1, 1, -1);
-		gl.glVertex3d(1, 1, -1);
-		gl.glVertex3d(1, -1, -1);
-		gl.glEnd();
-	} */
 		
 	private void drawSpline(GLAutoDrawable drawable) {
 		
@@ -193,16 +140,6 @@ public class NURBSEditor implements GLEventListener {
 		}
 	}
 	
-	/*private void render(GLAutoDrawable drawable) {
-		
-	    GL2 gl = drawable.getGL().getGL2();
-		
-	    gl.glBegin(GL2.GL_POINTS);
-	    gl.glColor3d(1.0, 1.0, 1.0);
-	    gl.glVertex2d (x, y);
-	    gl.glEnd();
-	    gl.glFlush();
-	} */
 	private void displayPolyLine(GLAutoDrawable drawable) {
 		
 		final double SIZE = 0.02;
@@ -230,17 +167,10 @@ public class NURBSEditor implements GLEventListener {
 		}
 		
 	}
-
-	
 	
 	//UNUSED METHODS
 	@Override
-	public void reshape(GLAutoDrawable arg0, int arg1, int arg2, int arg3,
-			int arg4) {
-		//System.out.println("RESHAPE CALLED");
-	}
+	public void reshape(GLAutoDrawable arg0, int arg1, int arg2, int arg3, int arg4) {}
 	@Override
-	public void dispose(GLAutoDrawable arg0) {
-		//System.out.println("DISPOSE CALLED");		
-	}
+	public void dispose(GLAutoDrawable arg0) {}
 }
