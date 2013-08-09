@@ -1,0 +1,70 @@
+#Inventor V2.0 ascii
+
+PerspectiveCamera {
+   position -2 0 5
+   orientation 0 1 0 0
+   nearDistance 1
+   farDistance  10
+   left        -0.5
+   right       0.5
+   top         0.5
+   bottom      -0.5
+}
+
+PointLight {
+   location 0 0 2
+   color    1 1 1
+}
+
+Separator {
+   Transform {
+      translation -2 0 0
+      rotation 1 0 0 .75
+      scaleFactor 1 1 1
+   }
+   Transform {
+      translation 0 0 0
+      rotation 0 1 0 .6
+      scaleFactor 1 1 1
+   }
+   Material {
+      ambientColor   0.2 0. 0.
+      diffuseColor   0.8 0. 0.
+      specularColor  0 0 0
+      shininess      0.2
+   }
+   Coordinate3 {
+      point	[ -1 -1  1,
+		   1 -1  1,
+		   1  1  1,
+		  -1  1  1,
+		  -1 -1 -1,
+		   1 -1 -1,
+		   1  1 -1,
+		  -1  1 -1
+		]
+   }
+   Normal {
+      vector	[  0  0  1,
+		   0  0 -1,
+		   0  1  0,
+		   0 -1  0,
+		   1  0  0,
+		  -1  0  0
+		]
+   }
+   IndexedFaceSet {
+      coordIndex [ 0, 1, 2, -1, 0, 2, 3, -1,
+		   5, 4, 6, -1, 6, 4, 7, -1,
+		   1, 5, 2, -1, 2, 5, 6, -1,
+		   4, 3, 7, -1, 3, 4, 0, -1,
+		   3, 2, 7, -1, 6, 7, 2, -1,
+		   0, 4, 1, -1, 1, 4, 5, -1]
+      normalIndex [ 0, 0, 0, -1, 0, 0, 0, -1,
+		   1, 1, 1, -1, 1, 1, 1, -1,
+		   4, 4, 4, -1, 4, 4, 4, -1,
+		   5, 5, 5, -1, 5, 5, 5, -1,
+		   2, 2, 2, -1, 2, 2, 2, -1,
+		   3, 3, 3, -1, 3, 3, 3, -1]
+   }
+}
