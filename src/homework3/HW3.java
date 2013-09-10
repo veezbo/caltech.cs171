@@ -10,10 +10,9 @@ import org.antlr.runtime.RecognitionException;
 
 public class HW3 {
 
-	public static void main(String[] args) throws FileNotFoundException, IOException, RecognitionException {
-	
-	//Parsing Input
-		//ANTLRInputStream input = new ANTLRInputStream(new FileInputStream(FILE));
+    public static void main(String[] args) throws FileNotFoundException, IOException, RecognitionException {
+
+    //Parsing Input
         ANTLRInputStream input = new ANTLRInputStream(System.in);
         OpenInventorNewLexer lexer = new OpenInventorNewLexer(input);
         CommonTokenStream tokens = new CommonTokenStream(lexer);
@@ -38,12 +37,12 @@ public class HW3 {
     //Run Shader, while saving to canvas
         ShadedRenderer sr = new ShadedRenderer (c);    
         sr.shaded (n, xRes, yRes, oid);
-    
+
     //Generate the ppm based on data in Canvas (to output file called output.txt)
         Canvas.ppmGen(c.grid, xRes, yRes);
         
         System.exit(0);
         
-	}
+    }
 
 }
