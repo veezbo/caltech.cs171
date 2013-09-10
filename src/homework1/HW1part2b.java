@@ -8,10 +8,10 @@ import org.antlr.runtime.CommonTokenStream;
 
 public class HW1part2b {
 
-	public static void main(String[] args) throws FileNotFoundException, IOException {
-		
-		//Basic Lexer/Parser Stuff
-		ANTLRInputStream input = new ANTLRInputStream(new FileInputStream("nonagons-box.2d"));
+    public static void main(String[] args) throws FileNotFoundException, IOException {
+    	
+    	//Basic Lexer/Parser Stuff
+    	ANTLRInputStream input = new ANTLRInputStream(new FileInputStream("nonagons-box.2d"));
         polylineCalcLexer lexer = new polylineCalcLexer(input);
         CommonTokenStream tokens = new CommonTokenStream(lexer);
         polylineCalcParser parser = new polylineCalcParser(tokens);
@@ -65,6 +65,6 @@ public class HW1part2b {
         //print out the generated grid in PPM format
         Canvas.ppmGen(canvas.pixels, xRes, yRes);
         
-	}
+    }
 
-}
+}   

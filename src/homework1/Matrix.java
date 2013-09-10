@@ -4,21 +4,21 @@ import org.apache.commons.math3.geometry.euclidean.threed.Vector3D;
 import org.apache.commons.math3.linear.*;
 
 public abstract class Matrix {
-	
-	
+
+
 	//Constructors
 	public static RealMatrix createMatrix(int x, int y) {
 		return new Array2DRowRealMatrix(x, y);
 	}
-	
+
 	public static RealMatrix createMatrix(double[] v) {
 		return new Array2DRowRealMatrix(v);
 	}
-	
+
 	public static RealMatrix createMatrix(double[][] d) {
 		return new Array2DRowRealMatrix(d);
 	}
-	
+
 	public static RealMatrix createIdentityMatrix44() {
 		double[][] data = {{1, 0, 0, 0},
 						   {0, 1, 0, 0},
@@ -26,15 +26,15 @@ public abstract class Matrix {
 						   {0, 0, 0, 1}};
 		return Matrix.createMatrix(data);
 	}
-	
+
 	public static RealVector createVector(int size) {
 		return new ArrayRealVector(size);
 	}
-	
+
 	public static RealVector createVector(double[] d) {
 		return new ArrayRealVector(d);
 	}
-	
+
 	public static RealVector createHomogenizedVector(double[] d) {
 		int length = d.length;
 		double[] dd = new double[length+1];
@@ -45,8 +45,8 @@ public abstract class Matrix {
 		
 		return new ArrayRealVector(dd);
 	}
-	
-	
+
+
 	//Creating Transform Matrices
 	public static RealMatrix createTranslationMatrix (double[] vals) {
 		
@@ -58,7 +58,7 @@ public abstract class Matrix {
 		return Matrix.createMatrix(data);
 		
 	}
-	
+
 	public static RealMatrix createRotationMatrix(double[] vals) {
 		
 		RealVector rv = Matrix.createVector(vals);
@@ -77,7 +77,7 @@ public abstract class Matrix {
 		return Matrix.createMatrix(data);
 		
 	}
-	
+
 	public static RealMatrix createScaleFactorMatrix(double[] vals) {
 		
 		double[][] data = {{vals[0], 0, 0, 0},
@@ -88,28 +88,28 @@ public abstract class Matrix {
 		return Matrix.createMatrix(data);
 		
 	}
-	
+
 	public static RealMatrix createPerspectiveProjection(double l, double r, double b, double t, double n, double f) {
 		
 		double[][] data = {{2*n/(r-l), 0,         (r+l)/(r-l),    0           },
 						  {0,          2*n/(t-b), (t+b)/(t-b),    0           },
-						  {0,          0,         -(f+n)/(f-n), -2*f*n/(f-n)},
+						  {0,          0,         -(f+n)/(f-n),   -2*f*n/(f-n)},
 						  {0,          0,         -1,             0           }};
 		
 		return Matrix.createMatrix(data);
 		
 	}
 		
-	
+
 	//Get Methods
 	public static double[][] getMatrixArray (RealMatrix a) {
 		return a.getData();
 	}
-	
+
 	public static double[] getVectorArray (RealVector a) {
 		return a.toArray();
 	}
-	
+
 	public static float[] getVectorFloatArray (RealVector a) {
 		double[] arr = Matrix.getVectorArray(a);
 		int size = arr.length;
@@ -120,47 +120,47 @@ public abstract class Matrix {
 		}
 		return f;
 	}
-	
-	
+
+
 	//Addition
 	public static RealMatrix add(RealMatrix a, RealMatrix b) {
 		return a.add(b);
 	}
-	
+
 	public static RealVector add(RealVector a, RealVector b) {
 		return a.add(b);
 	}
-	
+
 	//Subtraction
 	public static RealMatrix sub(RealMatrix a, RealMatrix b) {
 		return a.subtract(b);
 	}
-	
+
 	public static RealVector sub(RealVector a, RealVector b) {
 		return a.subtract(b);
 	}
-	
+
 	//Multiplication
 	public static RealMatrix mult(RealMatrix a, RealMatrix b) {
 		return a.multiply(b);
 	}
-	
+
 	public static RealVector mult(RealMatrix a, RealVector b) {
 		return a.operate(b);
 	}
-	
+
 	public static RealVector mult(RealVector a, RealMatrix b) {
 		return b.preMultiply(a);
 	}
-	
+
 	public static RealMatrix mult(RealMatrix a, double d) {
 		return a.scalarMultiply(d);
 	}
-	
+
 	public static RealVector mult(RealVector a, double d) {
 		return a.mapMultiply(d);
 	}
-	
+
 	public static RealVector componentMult(RealVector a, RealVector b) {
 		int dim = a.getDimension();
 		double[] data = new double[dim];
@@ -169,13 +169,13 @@ public abstract class Matrix {
 		}
 		return Matrix.createVector(data);
 	}
-	
-	
+
+
 	//Dot Products
 	public static double dotProduct(RealVector a, RealVector b) {
 		return a.dotProduct(b);
 	}
-	
+
 	//Cross Products
 	public static RealVector crossProduct (RealVector x, RealVector y) {
 		RealVector a = Matrix.createVector(new double[] {x.getEntry(0), x.getEntry(1), x.getEntry(2) });
@@ -184,12 +184,12 @@ public abstract class Matrix {
 		Vector3D v2 = new Vector3D (b.toArray());
 		return Matrix.createVector(Vector3D.crossProduct(v1, v2).toArray());
 	}
-	
+
 	//Normalization and Homogenization
 	public static RealVector normalize (RealVector a) {
 		return a.unitVector();
 	}
-	
+
 	public static RealVector homogenize (RealVector a) {
 		int dim = a.getDimension();
 		double w = a.getEntry( (dim-1) );
@@ -197,19 +197,19 @@ public abstract class Matrix {
 		if (w==0) throw new ArithmeticException("Homogenous Coordinate is Zero!");
 		return Matrix.mult(a, 1./w);
 	}
-	
+
 	public static RealVector dehomogenize (RealVector a) {
 		return Matrix.createVector(new double[] {a.getEntry(0), a.getEntry(1), a.getEntry(2) });
 	}
-	
+
 	//Matrix Transposition
 	public static RealMatrix transpose(RealMatrix a) {
 		return a.transpose();
 	}
-	
-	
+
+
 	//Matrix Inverse
 	public static RealMatrix inverse(RealMatrix a) {
 		return new LUDecomposition(a).getSolver().getInverse();
 	}
-}
+}	

@@ -8,68 +8,68 @@ import org.antlr.runtime.*;
 import org.apache.commons.math3.linear.*;
 
 public class HW1part2a {
-	
+
 	//inner class that is useful for storing data
 	static class TransformData {
 		
-    	String id;
-    	ArrayList<Double> vals = new ArrayList<Double>();
-    	
-    	public TransformData(String $id, ArrayList<String> $vals) {
-    		id = $id;
-    		for (String s : $vals) {
-    			vals.add(Double.parseDouble(s));
-    		}
-    	}
-    	
-    }
-	
+		String id;
+		ArrayList<Double> vals = new ArrayList<Double>();
+		
+		public TransformData(String $id, ArrayList<String> $vals) {
+			id = $id;
+			for (String s : $vals) {
+				vals.add(Double.parseDouble(s));
+			}
+		}
+		
+	}
+
 	//to be used throughout the program
 	static RealMatrix rm = Matrix.createIdentityMatrix44();
 
-	
+
 	public static void main(String[] args) throws IOException {
 		
 		ANTLRInputStream input = new ANTLRInputStream(new FileInputStream("transform-error-msg.tf"));
-        transformCalcLexer lexer = new transformCalcLexer(input);
-        CommonTokenStream tokens = new CommonTokenStream(lexer);
-        transformCalcParser parser = new transformCalcParser(tokens);
-        
-        ArrayList<TransformData> tds = new ArrayList<TransformData>();
-                
-        while (true) {
-        	try {
-        		
-            	ArrayList<String> inputs = parser.transformation();
-            	if (inputs==null  || inputs.isEmpty()) break;
-    			String id = inputs.get(0);
-    			inputs.remove(0);
-    			tds.add( new TransformData(id, inputs) );
-    			continue;
-    			
-        	} catch (Exception e) {
-        		System.out.println("program ended in error");
-        		System.exit(-1);
-    		}
-        }
-        
-        
-        //start running the program
-        int size = tds.size();
-        for (int i = size-1; i >= 0; i--) {
-        	caller(tds.get(i));
-        }
-        
-        System.out.println(rm);
+		transformCalcLexer lexer = new transformCalcLexer(input);
+		CommonTokenStream tokens = new CommonTokenStream(lexer);
+		transformCalcParser parser = new transformCalcParser(tokens);
+
+		ArrayList<TransformData> tds = new ArrayList<TransformData>();
+		        
+		while (true) {
+			try {
+				
+		    	ArrayList<String> inputs = parser.transformation();
+		    	if (inputs==null  || inputs.isEmpty()) break;
+				String id = inputs.get(0);
+				inputs.remove(0);
+				tds.add( new TransformData(id, inputs) );
+				continue;
+				
+			} catch (Exception e) {
+				System.out.println("program ended in error");
+				System.exit(-1);
+			}
+		}
+
+
+		//start running the program
+		int size = tds.size();
+		for (int i = size-1; i >= 0; i--) {
+			caller(tds.get(i));
+		}
+
+		System.out.println(rm);
 	}
-	
+
 	public static void caller(TransformData td) {
 		String check = td.id;
 		if (check.equals("translation")) translation(td.vals);
 		if (check.equals("rotation")) rotation(td.vals);
 		if (check.equals("scaleFactor")) scaleFactor(td.vals);
 	}
-	
+
 	public static void translation(ArrayList<Double> vals) {
 		
 		double[][] data = {{1, 0, 0, vals.get(0)},
@@ -80,7 +80,7 @@ public class HW1part2a {
 		rm = Matrix.createMatrix(data).multiply(rm);
 		
 	}
-	
+
 	public static void rotation(ArrayList<Double> vals) {
 		
 		double[] vectorvals = {vals.get(0), vals.get(1), vals.get(2)};
@@ -100,7 +100,7 @@ public class HW1part2a {
 		rm = Matrix.createMatrix(data).multiply(rm);
 		
 	}
-	
+
 	public static void scaleFactor(ArrayList<Double> vals) {
 		
 		double[][] data = {{vals.get(0), 0, 0, 0},
@@ -111,5 +111,5 @@ public class HW1part2a {
 		rm = Matrix.createMatrix(data).multiply(rm);
 		
 	}
-	
+
 }
