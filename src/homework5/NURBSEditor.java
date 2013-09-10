@@ -12,17 +12,17 @@ import javax.media.opengl.glu.GLU;
 
 
 public class NURBSEditor implements GLEventListener {
-	
+
 	GLCanvas canvas;
 	GLU glu;
-	
+
 	ArrayList<Double> t = new ArrayList<Double>();
 	ArrayList<Point> P = new ArrayList<Point>();
 	final double du = 0.0005;
 	final int xRes, yRes;
-	
+
 	//private double x, y;
-	
+
 	//Parallel ArrayLists that hold the values of the drawnNurb pixels
 	ArrayList<Point> drawnNurbs = new ArrayList<Point>();
 	ArrayList<Double> uvals = new ArrayList<Double>();
@@ -42,9 +42,9 @@ public class NURBSEditor implements GLEventListener {
 		
 		this.canvas = canvas;
 	}
-	
+
 	public void coxDeBoor () {
-	
+
 		drawnNurbs.clear();
 		uvals.clear();
 		
@@ -97,7 +97,7 @@ public class NURBSEditor implements GLEventListener {
 		}
 		
 	}
-	
+
 	private void clearScreen(GLAutoDrawable drawable) {
 		GL2 gl = drawable.getGL().getGL2();
 		
@@ -116,7 +116,7 @@ public class NURBSEditor implements GLEventListener {
 	 	
 	 	glu = new GLU();
 	}
-	
+
 	@Override
 	public void display(GLAutoDrawable drawable) {
 				
@@ -139,7 +139,7 @@ public class NURBSEditor implements GLEventListener {
 			gl.glEnd();
 		}
 	}
-	
+
 	private void displayPolyLine(GLAutoDrawable drawable) {
 		
 		final double SIZE = 0.02;
@@ -167,8 +167,8 @@ public class NURBSEditor implements GLEventListener {
 		}
 		
 	}
-	
-	//UNUSED METHODS
+
+//UNUSED METHODS
 	@Override
 	public void reshape(GLAutoDrawable arg0, int arg1, int arg2, int arg3, int arg4) {}
 	@Override

@@ -10,14 +10,14 @@ import javax.swing.JFrame;
 
 
 public class HW5 {
-	
-	public static void main(String[] args) {
-		
-		final int xRes = 500, yRes = 500;
-		// setup OpenGL Version 2
+
+    public static void main(String[] args) {
+    	
+    	final int xRes = 500, yRes = 500;
+    	// setup OpenGL Version 2
     	GLProfile profile = GLProfile.get(GLProfile.GL2);
     	GLCapabilities capabilities = new GLCapabilities(profile);
- 
+
     	// The canvas is the widget that's drawn in the JFrame
     	GLCanvas canvas = new GLCanvas(capabilities);
     	canvas.setSize( xRes , yRes );
@@ -50,6 +50,6 @@ public class HW5 {
         frame.setSize( xRes, yRes );
         frame.setVisible( true );
 
-	}
+    }
 
 }
