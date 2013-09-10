@@ -76,11 +76,11 @@ public class CatmullRomSplineSolver {
 			double u = 0;
 			for (int j = keyStart; j <= keyEnd; j++) {
 				//splining equation taken from catmullRomSpline paper
-				locFrames[j] = Triple.add(p1, 
-										  Triple.mult(Triple.add(Triple.mult(p0, -1*tension), Triple.mult(p2, tension)), u),
-										  Triple.mult(Triple.add(Triple.mult(p0, 2*tension), Triple.mult(p1, tension-3), Triple.mult(p2, 3-2*tension), Triple.mult(p3, -1*tension)), u*u),
-										  Triple.mult(Triple.add(Triple.mult(p0, -1*tension), Triple.mult(p1, 2-tension), Triple.mult(p2, tension-2), Triple.mult(p3, tension)), u*u*u)
-										  );
+				locFrames[j] = Triple.add(p1,
+											Triple.mult(Triple.add(Triple.mult(p0, -1*tension), Triple.mult(p2, tension)), u),
+											Triple.mult(Triple.add(Triple.mult(p0, 2*tension), Triple.mult(p1, tension-3), Triple.mult(p2, 3-2*tension), Triple.mult(p3, -1*tension)), u*u),
+											Triple.mult(Triple.add(Triple.mult(p0, -1*tension), Triple.mult(p1, 2-tension), Triple.mult(p2, tension-2), Triple.mult(p3, tension)), u*u*u)
+											);
 				u+=du;
 			}
 		}
@@ -124,11 +124,11 @@ public class CatmullRomSplineSolver {
 			double u = 0;
 			for (int j = keyStart; j <= keyEnd; j++) {
 				//splining equation taken from catmullRomSpline paper
-				Quadruple ipl = Quadruple.add(p1, 
-	  										Quadruple.mult(Quadruple.add(Quadruple.mult(p0, -1*tension), Quadruple.mult(p2, tension)), u),
-	  										Quadruple.mult(Quadruple.add(Quadruple.mult(p0, 2*tension), Quadruple.mult(p1, tension-3), Quadruple.mult(p2, 3-2*tension), Quadruple.mult(p3, -1*tension)), u*u),
-	  										Quadruple.mult(Quadruple.add(Quadruple.mult(p0, -1*tension), Quadruple.mult(p1, 2-tension), Quadruple.mult(p2, tension-2), Quadruple.mult(p3, tension)), u*u*u)
-								);
+				Quadruple ipl = Quadruple.add(p1,
+												Quadruple.mult(Quadruple.add(Quadruple.mult(p0, -1*tension), Quadruple.mult(p2, tension)), u),
+												Quadruple.mult(Quadruple.add(Quadruple.mult(p0, 2*tension), Quadruple.mult(p1, tension-3), Quadruple.mult(p2, 3-2*tension), Quadruple.mult(p3, -1*tension)), u*u),
+												Quadruple.mult(Quadruple.add(Quadruple.mult(p0, -1*tension), Quadruple.mult(p1, 2-tension), Quadruple.mult(p2, tension-2), Quadruple.mult(p3, tension)), u*u*u)
+												);
 				//rotFrames[j] = new Quadruple(Matrix.getVectorArray(Matrix.normalize(Matrix.createVector(ipl.data))));
 				//determined that you don't have to normalize the previous vector (quadruple)
 				rotFrames[j] = ipl;
@@ -174,10 +174,10 @@ public class CatmullRomSplineSolver {
 			for (int j = keyStart; j <= keyEnd; j++) {
 				//splining equation taken from catmullRomSpline paper
 				scaleFrames[j] = Triple.add(p1, 
-										    Triple.mult(Triple.add(Triple.mult(p0, -1*tension), Triple.mult(p2, tension)), u),
-										    Triple.mult(Triple.add(Triple.mult(p0, 2*tension), Triple.mult(p1, tension-3), Triple.mult(p2, 3-2*tension), Triple.mult(p3, -1*tension)), u*u),
-										    Triple.mult(Triple.add(Triple.mult(p0, -1*tension), Triple.mult(p1, 2-tension), Triple.mult(p2, tension-2), Triple.mult(p3, tension)), u*u*u)
-										  );
+											Triple.mult(Triple.add(Triple.mult(p0, -1*tension), Triple.mult(p2, tension)), u),
+											Triple.mult(Triple.add(Triple.mult(p0, 2*tension), Triple.mult(p1, tension-3), Triple.mult(p2, 3-2*tension), Triple.mult(p3, -1*tension)), u*u),
+											Triple.mult(Triple.add(Triple.mult(p0, -1*tension), Triple.mult(p1, 2-tension), Triple.mult(p2, tension-2), Triple.mult(p3, tension)), u*u*u)
+											);
 				u+=du;
 			}
 		}

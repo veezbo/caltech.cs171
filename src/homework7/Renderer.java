@@ -60,7 +60,7 @@ public class Renderer implements GLEventListener {
 	final double aspect = 1.0, zNear = .1, zFar = 40.;	
 	@Override
 	public void init(GLAutoDrawable drawable) {
-		
+
 		GL2 gl = drawable.getGL().getGL2();
 		
 	    clearScreen(drawable);
@@ -147,41 +147,41 @@ public class Renderer implements GLEventListener {
 			gl.glTranslated(trans.data[0], trans.data[1], trans.data[2]);
 			gl.glRotated(rot.data[0], rot.data[1], rot.data[2], rot.data[3]);
 			gl.glScaled(scale.data[0], scale.data[1], scale.data[2]);
-			
+
 			//constant translate solution
-	    	gl.glTranslatef(0.f, (float) -height/2, 0.f);
-		
+			gl.glTranslatef(0.f, (float) -height/2, 0.f);
+
 			gl.glPushMatrix();
 			//clearScreen(drawable);
 			gl.glColor3d(0., 1.0, 1.0);
-	        glu.gluCylinder(quad, height/ratio, height/ratio, height, 256, 256);
-	        gl.glPopMatrix();
-	        
-	        gl.glPushMatrix();
-	        //clearScreen(drawable);
-	        gl.glColor3d(1.0, 0., 1.0);
-	        gl.glTranslatef(0.f, (float) height, 0.f);
-	        gl.glRotatef(90.f, 1.f, 0.f, 0.f);
-	        gl.glTranslatef(0.f, (float) height/2, 0.f);	
-	        glu.gluCylinder(quad, height/ratio, height/ratio, height, 256, 256);
-	        gl.glPopMatrix();
-	        
-	        gl.glPushMatrix();
-	        gl.glColor3d(1.0, 1.0, 0.0);
-	        gl.glTranslatef(0.f, (float) height, 0.f);
-	        //gl.glRotatef(90.f, 1.f, 0.f, 0.f);
-	        //gl.glTranslatef(0.f, (float) -height/2, 0.f);
-	        glu.gluCylinder(quad, height/ratio, height/ratio, height, 256, 256);
-	        gl.glPopMatrix();
-	    
-	    gl.glPopMatrix();
+			glu.gluCylinder(quad, height/ratio, height/ratio, height, 256, 256);
+			gl.glPopMatrix();
+
+			gl.glPushMatrix();
+			//clearScreen(drawable);
+			gl.glColor3d(1.0, 0., 1.0);
+			gl.glTranslatef(0.f, (float) height, 0.f);
+			gl.glRotatef(90.f, 1.f, 0.f, 0.f);
+			gl.glTranslatef(0.f, (float) height/2, 0.f);	
+			glu.gluCylinder(quad, height/ratio, height/ratio, height, 256, 256);
+			gl.glPopMatrix();
+
+			gl.glPushMatrix();
+			gl.glColor3d(1.0, 1.0, 0.0);
+			gl.glTranslatef(0.f, (float) height, 0.f);
+			//gl.glRotatef(90.f, 1.f, 0.f, 0.f);
+			//gl.glTranslatef(0.f, (float) -height/2, 0.f);
+			glu.gluCylinder(quad, height/ratio, height/ratio, height, 256, 256);
+			gl.glPopMatrix();
+
+		gl.glPopMatrix();
 	}
 
 
 	private void clearScreen(GLAutoDrawable drawable) {
 		final GL2 gl = drawable.getGL().getGL2();
 		gl.glClear(GL2.GL_COLOR_BUFFER_BIT | GL2.GL_DEPTH_BUFFER_BIT);
-	    gl.glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
+		gl.glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
 	}
 
 //Unused Methods
