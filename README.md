@@ -3,10 +3,9 @@ CS171 Homework Assignments
 
 Assignments for the Fall 2013 CS171 class at Caltech with Professor Al Barr.
 
-**If you are taking the class currently, *honor code*.**
-
 **To see the bulk of the assignment work, look inside the ```src``` folder. Anything in that folder was written entirely by me (aside from homework0).**
 
+**If you are taking the class currently, *honor code*.**
 
 The below instructions are for compiling on Linux, and all the provided JOGL libraries are for Linux as well. If you want to compile on Windows, install the Windows JOGL libraries, and replace them in the classpath.
 
@@ -28,4 +27,4 @@ Yes, I know I should have made a Makefile (or even a script!).
 
 #### Addendum
 
-I'll eventually upload the ANTLR .g files once I can recover the files from my old Windows partition.
+I'll eventually upload the ANTLR ```.g``` files once I can recover them from my old Windows partition.
