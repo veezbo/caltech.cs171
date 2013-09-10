@@ -20,28 +20,28 @@ import javax.media.opengl.GLEventListener;
 import javax.media.opengl.awt.GLCanvas;
 
 /*
- * Class that takes all data and implements the drawing and pertinent shading
- */
+* Class that takes all data and implements the drawing and pertinent shading
+*/
 public class Renderer implements GLEventListener 
 {
     private OpenInventorData oid;
-    
+
     static final int WIREFRAME_SHADING = 0;
     static final int FLAT_SHADING = 1;
     static final int GOURAND_SHADING = 2;
     int shadingStyle = 2;
-    
+
     GLCanvas canvas;
-    
+
     public Renderer(OpenInventorData oid, GLCanvas canvas) {
     	this.oid = oid;
     	this.canvas = canvas;
     }
-    
+
     public void setShading(int n) {
     	shadingStyle = n;
     }
-    
+
     public void init(GLAutoDrawable glDrawable) {
     	
         //Initial Stuff
@@ -77,7 +77,7 @@ public class Renderer implements GLEventListener
             setLights(glDrawable);
             
         }
- 
+
     public void display(GLAutoDrawable glDrawable) 
     {
         final GL2 gl = glDrawable.getGL().getGL2();
@@ -154,7 +154,7 @@ public class Renderer implements GLEventListener
         	sdCount++;
         }
     }
- 
+
     public void setLights(GLAutoDrawable glDrawable) {
     	
     	final GL2 gl = glDrawable.getGL().getGL2();
@@ -206,7 +206,7 @@ public class Renderer implements GLEventListener
         
         gl.glEnable(GL2.GL_LIGHTING);
     }
-    
+
     public void setMaterial(GLAutoDrawable glDrawable, int sdCount) {
     	
     	MaterialData md = oid.sds.get(sdCount).md;
@@ -218,22 +218,22 @@ public class Renderer implements GLEventListener
         float diff[]= Matrix.getVectorFloatArray(Matrix.createHomogenizedVector(md.diffuseColor.data));
         float spec[]= Matrix.getVectorFloatArray(Matrix.createHomogenizedVector(md.specularColor.data));
         float shiny = (float) md.shininess;
-		
-		gl.glMaterialfv(GL2.GL_FRONT, GL2.GL_AMBIENT, amb, 0);
-		gl.glMaterialfv(GL2.GL_FRONT, GL2.GL_DIFFUSE, diff, 0);
-		gl.glMaterialfv(GL2.GL_FRONT, GL2.GL_SPECULAR, spec, 0);
-		gl.glMaterialfv(GL2.GL_FRONT, GL2.GL_EMISSION, emit, 0);
-		gl.glMaterialf(GL2.GL_FRONT, GL2.GL_SHININESS, shiny);
+    	
+    	gl.glMaterialfv(GL2.GL_FRONT, GL2.GL_AMBIENT, amb, 0);
+    	gl.glMaterialfv(GL2.GL_FRONT, GL2.GL_DIFFUSE, diff, 0);
+    	gl.glMaterialfv(GL2.GL_FRONT, GL2.GL_SPECULAR, spec, 0);
+    	gl.glMaterialfv(GL2.GL_FRONT, GL2.GL_EMISSION, emit, 0);
+    	gl.glMaterialf(GL2.GL_FRONT, GL2.GL_SHININESS, shiny);
     	
     }
-    
+
 //Uninteresting and Unused Methods
-    
+
     public void displayChanged(GLAutoDrawable gLDrawable, boolean modeChanged, boolean deviceChanged) {}
-    
+
     public void reshape(GLAutoDrawable gLDrawable, int x, int y, int width, int height) {
         final GL2 gl = gLDrawable.getGL().getGL2();
- 
+
         if (height <= 0) // avoid a divide by zero error!
         {
             height = 1;
@@ -243,45 +243,45 @@ public class Renderer implements GLEventListener
         	width = height;
         else
         	height = width;
- 
+
         gl.glViewport(0, 0, width, height);
     }
-    
-//	private void initLights(GLAutoDrawable gLDrawable) {
-//        final GL2 gl = gLDrawable.getGL().getGL2();
-//        float amb[] = { 0.0f, 0.0f, 0.0f, 1.0f };
-//        float diff[]= { 1.0f, 1.0f, 1.0f, 1.0f };
-//        float spec[]= { 1.0f, 1.0f, 1.0f, 1.0f };
-//        float lightpos[]= { 2.0f, 2.0f, 5.0f, 1.0f };
-//        float shiny = 4.0f;
-//        
-//        gl.glLightModelfv(GL2.GL_LIGHT_MODEL_AMBIENT, FloatBuffer.wrap(amb));
-//        
-//        gl.glLightfv(GL2.GL_LIGHT0, GL2.GL_AMBIENT, amb, 0);
-//        gl.glLightfv(GL2.GL_LIGHT0, GL2.GL_DIFFUSE, diff, 0);
-//        gl.glLightfv(GL2.GL_LIGHT0, GL2.GL_SPECULAR, spec, 0);
-//        gl.glLightfv(GL2.GL_LIGHT0, GL2.GL_POSITION, lightpos, 0);
-//        gl.glLightf(GL2.GL_LIGHT0, GL2.GL_SHININESS, shiny);
-//        gl.glEnable(GL2.GL_LIGHT0);
-//        
-//        gl.glEnable(GL2.GL_LIGHTING);
-//	}
-//	
-//	private void initMaterial(GLAutoDrawable gLDrawable) {
-//        final GL2 gl = gLDrawable.getGL().getGL2();
-//		float emit[] = {0.0f, 0.0f, 0.0f, 1.0f};
-//		float  amb[] = {0.0f, 0.0f, 0.0f, 1.0f};
-//		float diff[] = {0.0f, 0.0f, 1.0f, 1.0f};
-//		float spec[] = {1.0f, 1.0f, 1.0f, 1.0f};
-//		float shiny = 20.0f;
-//		
-//		gl.glMaterialfv(GL2.GL_FRONT, GL2.GL_AMBIENT, amb, 0);
-//		gl.glMaterialfv(GL2.GL_FRONT, GL2.GL_DIFFUSE, diff, 0);
-//		gl.glMaterialfv(GL2.GL_FRONT, GL2.GL_SPECULAR, spec, 0);
-//		gl.glMaterialfv(GL2.GL_FRONT, GL2.GL_EMISSION, emit, 0);
-//		gl.glMaterialf(GL2.GL_FRONT, GL2.GL_SHININESS, shiny);
-//		
-//	}
-	
-	public void dispose(GLAutoDrawable arg0) {}
+
+    //	private void initLights(GLAutoDrawable gLDrawable) {
+    //        final GL2 gl = gLDrawable.getGL().getGL2();
+    //        float amb[] = { 0.0f, 0.0f, 0.0f, 1.0f };
+    //        float diff[]= { 1.0f, 1.0f, 1.0f, 1.0f };
+    //        float spec[]= { 1.0f, 1.0f, 1.0f, 1.0f };
+    //        float lightpos[]= { 2.0f, 2.0f, 5.0f, 1.0f };
+    //        float shiny = 4.0f;
+    //        
+    //        gl.glLightModelfv(GL2.GL_LIGHT_MODEL_AMBIENT, FloatBuffer.wrap(amb));
+    //        
+    //        gl.glLightfv(GL2.GL_LIGHT0, GL2.GL_AMBIENT, amb, 0);
+    //        gl.glLightfv(GL2.GL_LIGHT0, GL2.GL_DIFFUSE, diff, 0);
+    //        gl.glLightfv(GL2.GL_LIGHT0, GL2.GL_SPECULAR, spec, 0);
+    //        gl.glLightfv(GL2.GL_LIGHT0, GL2.GL_POSITION, lightpos, 0);
+    //        gl.glLightf(GL2.GL_LIGHT0, GL2.GL_SHININESS, shiny);
+    //        gl.glEnable(GL2.GL_LIGHT0);
+    //        
+    //        gl.glEnable(GL2.GL_LIGHTING);
+    //	}
+    //	
+    //	private void initMaterial(GLAutoDrawable gLDrawable) {
+    //        final GL2 gl = gLDrawable.getGL().getGL2();
+    //		float emit[] = {0.0f, 0.0f, 0.0f, 1.0f};
+    //		float  amb[] = {0.0f, 0.0f, 0.0f, 1.0f};
+    //		float diff[] = {0.0f, 0.0f, 1.0f, 1.0f};
+    //		float spec[] = {1.0f, 1.0f, 1.0f, 1.0f};
+    //		float shiny = 20.0f;
+    //		
+    //		gl.glMaterialfv(GL2.GL_FRONT, GL2.GL_AMBIENT, amb, 0);
+    //		gl.glMaterialfv(GL2.GL_FRONT, GL2.GL_DIFFUSE, diff, 0);
+    //		gl.glMaterialfv(GL2.GL_FRONT, GL2.GL_SPECULAR, spec, 0);
+    //		gl.glMaterialfv(GL2.GL_FRONT, GL2.GL_EMISSION, emit, 0);
+    //		gl.glMaterialf(GL2.GL_FRONT, GL2.GL_SHININESS, shiny);
+    //		
+    //	}
+
+    public void dispose(GLAutoDrawable arg0) {}
 }

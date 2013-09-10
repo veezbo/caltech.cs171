@@ -19,10 +19,10 @@ import org.antlr.runtime.RecognitionException;
 
 public class HW4 {
 
-	public static void main(String[] args) throws IOException, RecognitionException {
-		
-	//Parse Input
-		//ANTLRInputStream input = new ANTLRInputStream(new FileInputStream(FILE));
+    public static void main(String[] args) throws IOException, RecognitionException {
+    	
+    //Parse Input
+    	//ANTLRInputStream input = new ANTLRInputStream(new FileInputStream(FILE));
         ANTLRInputStream input = new ANTLRInputStream(System.in);
         OpenInventorNewLexer lexer = new OpenInventorNewLexer(input);
         CommonTokenStream tokens = new CommonTokenStream(lexer);
@@ -39,7 +39,7 @@ public class HW4 {
             xRes = Integer.parseInt(args[0]);
             yRes = Integer.parseInt(args[1]);
         }
-		
+    	
         
     //Set up OpenGL
     	GLProfile profile = GLProfile.get(GLProfile.GL2);
@@ -69,9 +69,9 @@ public class HW4 {
                 System.exit(0);
             }
         });
- 
+
         frame.setSize( frame.getContentPane().getPreferredSize() );
         frame.setVisible( true );
           
-	}
+    }
 }
