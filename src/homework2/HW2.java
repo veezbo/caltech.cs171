@@ -10,7 +10,6 @@ import org.antlr.runtime.*;
     public static void main(String[] args) throws FileNotFoundException, IOException, RecognitionException {
     	
     //Parsing Input
-    	//ANTLRInputStream input = new ANTLRInputStream(new FileInputStream(FILE));
     	ANTLRInputStream input = new ANTLRInputStream(System.in);
         OpenInventorLexer lexer = new OpenInventorLexer(input);
         CommonTokenStream tokens = new CommonTokenStream(lexer);
