@@ -18,10 +18,10 @@ import org.antlr.runtime.RecognitionException;
 
 public class HW7 {
 
-	public static void main(String[] args) throws FileNotFoundException, IOException, RecognitionException {
-		
-	//Parse Input
-		//ANTLRInputStream input = new ANTLRInputStream(new FileInputStream(FILE));
+    public static void main(String[] args) throws FileNotFoundException, IOException, RecognitionException {
+    	
+    //Parse Input
+    	//ANTLRInputStream input = new ANTLRInputStream(new FileInputStream(FILE));
         ANTLRInputStream input = new ANTLRInputStream(System.in);
         KeyframeLexer lexer = new KeyframeLexer(input);
         CommonTokenStream tokens = new CommonTokenStream(lexer);
@@ -30,11 +30,11 @@ public class HW7 {
         Keyframes keyframes = parser.keyframeParse();
         
     //Setting up OpenGL
-		final int xRes = 500, yRes = 500;
-		// setup OpenGL Version 2
+    	final int xRes = 500, yRes = 500;
+    	// setup OpenGL Version 2
     	GLProfile profile = GLProfile.get(GLProfile.GL2);
     	GLCapabilities capabilities = new GLCapabilities(profile);
- 
+
     	// The canvas is the widget that's drawn in the JFrame
     	GLCanvas canvas = new GLCanvas(capabilities);
     	canvas.setSize( xRes , yRes );
@@ -68,5 +68,5 @@ public class HW7 {
         frame.setLocation(50, 50);
         frame.setSize( xRes, yRes );
         frame.setVisible( true );        
-	}
+    }
 }

@@ -11,16 +11,16 @@ import javax.media.opengl.glu.GLU;
 import javax.media.opengl.glu.GLUquadric;
 
 public class Renderer implements GLEventListener {
-	
+
 	GLCanvas canvas;
 	private GLU glu = new GLU();
-    private GLUquadric quad;
-    Keyframes keyframes;
-    int numFrames;
-    static final double TENSION = 0.5;
-    
-    CatmullRomSplineSolver crss;
-	
+	private GLUquadric quad;
+	Keyframes keyframes;
+	int numFrames;
+	static final double TENSION = 0.5;
+
+	CatmullRomSplineSolver crss;
+
 	public Renderer(GLCanvas canvas, Keyframes keyframes) {
 		this.canvas = canvas;
 		this.keyframes = keyframes;
@@ -28,7 +28,7 @@ public class Renderer implements GLEventListener {
 		
 		this.crss = new CatmullRomSplineSolver(this.numFrames, this.keyframes, TENSION);
 	}
-	
+
 	boolean next = true;
 	public void displayNext() {
 		canvas.display();
@@ -55,7 +55,7 @@ public class Renderer implements GLEventListener {
 		keyEvent = false;
 		this.dir = -1;
 	}
-	
+
 	double zoomFactor = 120.;
 	final double aspect = 1.0, zNear = .1, zFar = 40.;	
 	@Override
@@ -63,26 +63,26 @@ public class Renderer implements GLEventListener {
 		
 		GL2 gl = drawable.getGL().getGL2();
 		
-        clearScreen(drawable);
-        
-        gl.glShadeModel(GL2.GL_FLAT);
-        gl.glEnable(GL2.GL_DEPTH_TEST);
-        
-        gl.glMatrixMode(GL2.GL_PROJECTION);
-        gl.glLoadIdentity();
-        //gl.glFrustum(-1., 1., -1., 1., 1, 10);
-        glu.gluPerspective(zoomFactor, aspect, zNear, zFar);
-        
-        gl.glMatrixMode(GL2.GL_MODELVIEW);
-        gl.glLoadIdentity();
-        //glu.gluLookAt(-5., 0.001, 0.001, 0, 0, 0, 1, 0, 1);
-        Triple firstloc = crss.getFrameLoc(0);
-        glu.gluLookAt(-10, 0, 10, firstloc.data[0], firstloc.data[1], firstloc.data[2], 1, 0, 1);
+	    clearScreen(drawable);
+	    
+	    gl.glShadeModel(GL2.GL_FLAT);
+	    gl.glEnable(GL2.GL_DEPTH_TEST);
+	    
+	    gl.glMatrixMode(GL2.GL_PROJECTION);
+	    gl.glLoadIdentity();
+	    //gl.glFrustum(-1., 1., -1., 1., 1, 10);
+	    glu.gluPerspective(zoomFactor, aspect, zNear, zFar);
+	    
+	    gl.glMatrixMode(GL2.GL_MODELVIEW);
+	    gl.glLoadIdentity();
+	    //glu.gluLookAt(-5., 0.001, 0.001, 0, 0, 0, 1, 0, 1);
+	    Triple firstloc = crss.getFrameLoc(0);
+	    glu.gluLookAt(-10, 0, 10, firstloc.data[0], firstloc.data[1], firstloc.data[2], 1, 0, 1);
 		
-        quad = glu.gluNewQuadric();
-        
+	    quad = glu.gluNewQuadric();
+	    
 	}
-	
+
 	private int currentFrame = numFrames-1;
 
 	public void update() {
@@ -110,7 +110,7 @@ public class Renderer implements GLEventListener {
 			}	
 		}
 	}
-	
+
 	@Override
 	public void display(GLAutoDrawable drawable) {
 		
@@ -133,7 +133,7 @@ public class Renderer implements GLEventListener {
 		displayCylinders(drawable, nextloc, nextrot, scale);
 		
 	}
-	
+
 	private void displayCylinders(GLAutoDrawable drawable, Triple trans, Quadruple rot, Triple scale) {
 				
 		final GL2 gl = drawable.getGL().getGL2();
@@ -149,7 +149,7 @@ public class Renderer implements GLEventListener {
 			gl.glScaled(scale.data[0], scale.data[1], scale.data[2]);
 			
 			//constant translate solution
-        	gl.glTranslatef(0.f, (float) -height/2, 0.f);
+	    	gl.glTranslatef(0.f, (float) -height/2, 0.f);
 		
 			gl.glPushMatrix();
 			//clearScreen(drawable);
@@ -173,17 +173,17 @@ public class Renderer implements GLEventListener {
 	        //gl.glTranslatef(0.f, (float) -height/2, 0.f);
 	        glu.gluCylinder(quad, height/ratio, height/ratio, height, 256, 256);
 	        gl.glPopMatrix();
-        
-        gl.glPopMatrix();
+	    
+	    gl.glPopMatrix();
 	}
-	
+
 
 	private void clearScreen(GLAutoDrawable drawable) {
 		final GL2 gl = drawable.getGL().getGL2();
 		gl.glClear(GL2.GL_COLOR_BUFFER_BIT | GL2.GL_DEPTH_BUFFER_BIT);
-        gl.glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
+	    gl.glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
 	}
-	
+
 //Unused Methods
 	@Override
 	public void dispose(GLAutoDrawable arg0) {}

@@ -4,22 +4,22 @@ import homework2.Quadruple;
 import homework2.Triple;
 
 public class CatmullRomSplineSolver {
-	
+
 	final double tension;
-	
+
 	int numFrames;
 	int numKeyFrames;
 	Keyframes keyframes;
 
 	//Translation Data
 	Triple[] locFrames;
-	
+
 	//Rotation Data
 	Quadruple[] rotFrames;
-	
+
 	//Scaling Data
 	Triple[] scaleFrames;
-	
+
 	public CatmullRomSplineSolver (int numFrames, Keyframes keyframes, double tension) {
 		this.numFrames = numFrames;
 		this.numKeyFrames = keyframes.size();
@@ -33,7 +33,7 @@ public class CatmullRomSplineSolver {
 		generateRotationFrames();
 		generateScaleFrames();
 	}
-	
+
 	public Triple getFrameLoc(int i) {
 		return locFrames[i];
 	}
@@ -43,7 +43,7 @@ public class CatmullRomSplineSolver {
 	public Triple getFrameScale(int i) {
 		return scaleFrames[i];
 	}
-	
+
 	private void generateTranslationFrames() {
 		for (int i = 0; i < numKeyFrames-1; i++) {
 			Keyframe k0, k1, k2, k3;
@@ -89,7 +89,7 @@ public class CatmullRomSplineSolver {
 			locFrames[j] = finalframe.translation;
 		}
 	}
-	
+
 	private void generateRotationFrames() {
 		for (int i = 0; i < numKeyFrames-1; i++) {
 			//get the relevant keyframes
@@ -140,9 +140,9 @@ public class CatmullRomSplineSolver {
 			rotFrames[j] = finalframe.rotation;
 		}
 	}
-	
+
 	private void generateScaleFrames() {
-        for (int i = 0; i < numKeyFrames-1; i++) {
+	    for (int i = 0; i < numKeyFrames-1; i++) {
 			Keyframe k0, k1, k2, k3;
 			if (i==0) {
 				k0 = keyframes.get(numKeyFrames-1);
@@ -174,9 +174,9 @@ public class CatmullRomSplineSolver {
 			for (int j = keyStart; j <= keyEnd; j++) {
 				//splining equation taken from catmullRomSpline paper
 				scaleFrames[j] = Triple.add(p1, 
-										  Triple.mult(Triple.add(Triple.mult(p0, -1*tension), Triple.mult(p2, tension)), u),
-										  Triple.mult(Triple.add(Triple.mult(p0, 2*tension), Triple.mult(p1, tension-3), Triple.mult(p2, 3-2*tension), Triple.mult(p3, -1*tension)), u*u),
-										  Triple.mult(Triple.add(Triple.mult(p0, -1*tension), Triple.mult(p1, 2-tension), Triple.mult(p2, tension-2), Triple.mult(p3, tension)), u*u*u)
+										    Triple.mult(Triple.add(Triple.mult(p0, -1*tension), Triple.mult(p2, tension)), u),
+										    Triple.mult(Triple.add(Triple.mult(p0, 2*tension), Triple.mult(p1, tension-3), Triple.mult(p2, 3-2*tension), Triple.mult(p3, -1*tension)), u*u),
+										    Triple.mult(Triple.add(Triple.mult(p0, -1*tension), Triple.mult(p1, 2-tension), Triple.mult(p2, tension-2), Triple.mult(p3, tension)), u*u*u)
 										  );
 				u+=du;
 			}
@@ -186,5 +186,5 @@ public class CatmullRomSplineSolver {
 			scaleFrames[j] = finalframe.scale;
 		}
 	}
-	
+
 }
